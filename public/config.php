@@ -31,16 +31,16 @@ switch ($_SERVER['SERVER_ADDR'])
 			break;
 		default:
 			// DIR
-			define('DIR_APPLICATION', '/Users/fernandomendes/github/emporiumcamisetas/public/catalog/');
-			define('DIR_SYSTEM', '/Users/fernandomendes/github/emporiumcamisetas/public/system/');
-			define('DIR_DATABASE', '/Users/fernandomendes/github/emporiumcamisetas/public/system/database/');
-			define('DIR_LANGUAGE', '/Users/fernandomendes/github/emporiumcamisetas/public/catalog/language/');
-			define('DIR_TEMPLATE', '/Users/fernandomendes/github/emporiumcamisetas/public/catalog/view/theme/');
-			define('DIR_CONFIG', '/Users/fernandomendes/github/emporiumcamisetas/public/system/config/');
-			define('DIR_IMAGE', '/Users/fernandomendes/github/emporiumcamisetas/public/image/');
-			define('DIR_CACHE', '/Users/fernandomendes/github/emporiumcamisetas/public/system/cache/');
-			define('DIR_DOWNLOAD', '/Users/fernandomendes/github/emporiumcamisetas/public/download/');
-			define('DIR_LOGS', '/Users/fernandomendes/github/emporiumcamisetas/public/system/logs/');
+			define('DIR_APPLICATION', '/srv/httpd/emporiumcamisetas.com.br/public/public/catalog/');
+			define('DIR_SYSTEM', '/srv/httpd/emporiumcamisetas.com.br/public/public/system/');
+			define('DIR_DATABASE', '/srv/httpd/emporiumcamisetas.com.br/public/public/system/database/');
+			define('DIR_LANGUAGE', '/srv/httpd/emporiumcamisetas.com.br/public/public/catalog/language/');
+			define('DIR_TEMPLATE', '/srv/httpd/emporiumcamisetas.com.br/public/public/catalog/view/theme/');
+			define('DIR_CONFIG', '/srv/httpd/emporiumcamisetas.com.br/public/public/system/config/');
+			define('DIR_IMAGE', '/srv/httpd/emporiumcamisetas.com.br/public/public/image/');
+			define('DIR_CACHE', '/srv/httpd/emporiumcamisetas.com.br/public/public/system/cache/');
+			define('DIR_DOWNLOAD', '/srv/httpd/emporiumcamisetas.com.br/public/public/download/');
+			define('DIR_LOGS', '/srv/httpd/emporiumcamisetas.com.br/public/public/system/logs/');
 
 			// DB
 			define('DB_DRIVER', 'mysql');
