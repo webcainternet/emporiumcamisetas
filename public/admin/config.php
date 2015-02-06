@@ -49,8 +49,8 @@ switch ($_SERVER['SERVER_ADDR'])
 			// DB
 			define('DB_DRIVER', 'mysql');
 			define('DB_HOSTNAME', 'localhost');
-			define('DB_USERNAME', 'root');
-			define('DB_PASSWORD', 'root');
+			define('DB_USERNAME', 'emporiumca');
+			define('DB_PASSWORD', 'jUSuy3gdd');
 			define('DB_DATABASE', 'emporiumca');
 			define('DB_PREFIX', 'oc_');
 			break;
