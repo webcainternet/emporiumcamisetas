@@ -1,0 +1,52 @@
+table.copu-tbl tbody tr.error-msg td {
+	padding: 0px;
+}
+table.copu-tbl tbody tr.error-msg td .warning {
+	margin: 0px;
+}
+table.copu-tbl tbody td.upload-ctrl {
+	padding: 5px;
+	text-align: center;
+}
+table.copu-tbl tbody td .drop-zone {
+	margin: 0px;
+	padding: 30px;
+	border: 4px dashed #ccc;
+}
+table.copu-tbl tbody td .drop-zone .bg-text {
+	margin: 20px;
+	font-size: 2em;
+	font-weight: bold;
+	color: #bbb;
+}
+table.copu-tbl tbody td .drop-zone .button {
+	position: relative;
+	overflow: hidden;
+}
+table.copu-tbl tbody td .drop-zone input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	transform: translate(-300px, 0) scale(4);
+	font-size: 16px;
+	direction: ltr;
+	cursor: pointer;
+}
+table.copu-tbl tbody td div.ui-progressbar {
+	margin: 5px 0;
+	height: 1.5em;
+	position: relative;
+}
+table.copu-tbl tbody td div.progressbar .progress-label {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 2px;
+	font-weight: bold;
+	font-size: 11px;
+	text-align: center;
+	text-shadow: 1px 1px 0 #fff;
+}

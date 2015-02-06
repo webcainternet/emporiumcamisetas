@@ -1,0 +1,164 @@
+html {
+	overflow: -moz-scrollbars-vertical;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #f5f6f8;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+body, td, th, input, textarea, select, a {
+	font-size: 12px;
+	line-height: 18px;
+}
+.fleft {
+	float: left;
+}
+.fright {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+h1,h2,h3 {
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-weight: normal;
+}
+h1 {
+	font-size: 28px;
+}
+h2 {
+	font-size: 24px;
+	color: #333;
+	margin: 60px 0 30px;
+}
+h3 {
+	font-size: 16px;
+	color: #666;
+}
+/*
+pre {
+ white-space: pre-wrap;
+ white-space: -moz-pre-wrap !important;
+ white-space: -pre-wrap;
+ white-space: -o-pre-wrap;
+ word-wrap: break-word;
+}
+*/
+#container {
+	width: 980px;
+	padding: 0;
+	margin: 0 auto;
+}
+#header {
+	margin: 10px;
+}
+#board {
+	width: 100%;
+	background: #FFF url('bg.png') repeat-y top left;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+}
+#menu {
+	width: 240px;
+	padding: 20px 0;
+	position: fixed;
+	top: 80px;
+}
+#content {
+	max-width: 640px;
+	padding: 0 40px 50px;
+	margin-left: 240px;
+}
+#footer {
+	margin: 10px;
+	padding: 10px 0;
+}
+#header p {
+	color: #666;
+}
+#menu ul {
+	margin: 0;
+	padding: 0;
+}
+#menu ul li {
+	list-style: none;
+}
+#menu ul li a {
+	display: block;
+	padding: 0 20px;
+	text-decoration: none;
+	color: #666;
+	line-height: 40px;
+	cursor: pointer;
+}
+#menu ul li a:hover {
+	text-decoration: none;
+	color: #00f;
+}
+#menu ul li a.active {
+	font-weight: bold;
+	color: #000;
+	background-color: #f6f6f6 ;
+}
+#footer p {
+	color: #666;
+}
+#content .info {
+	background-color: #fcfcfc;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-left: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+	padding: 10px 0 20px 30px;
+}
+#content .info table {
+	border-collapse: collapse;
+}
+#content .info table tr td {
+	padding: 0px 2px;
+}
+#content .info table tr td.attrib {
+	width: 110px;
+	vertical-align: top;
+}
+#content .info table tr td.vals {
+	font-weight: bold;
+}
+#content ol {
+	padding: 0 18px;
+}
+#content ol li {
+	margin: 12px 0;
+}
+#content .screenshot {
+	background-color: #FFF;
+	border: 1px solid #aaa;
+	padding: 10px 0 10px 30px;
+	-webkit-box-shadow: 2px 2px 2px #DDD;
+	-moz-box-shadow: 2px 2px 2px #DDD;
+	box-shadow: 2px 2px 2px #DDD;
+	overflow: auto;
+}
+#content .code {
+	font-family: "Courier New", Courier, monospace;
+	overflow: auto;
+}
+#content p.q {
+	font-weight: bold;
+	color: #333;
+}
