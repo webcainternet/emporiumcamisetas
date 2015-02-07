@@ -1,4 +1,4 @@
 <?php
 // Text
-$_['text_footer'] = '<a href="http://www.opencart.com">OpenCart</a> &copy; 2009-' . date('Y') . ' Todos os direitos reservados.<br />Versão  %s';
+$_['text_footer'] = 'Desenvolvido por <a href="http://lojavirtual.digital" target="_blank">LojaVirtual.digital</a> &copy; 2014-' . date('Y') . ' Todos os direitos reservados.<br />Versão  %s';
 ?>

@@ -26,7 +26,7 @@ $_['text_new_total']            = 'Total';
 $_['text_new_download']         = 'Assim que seu pagamento for confirmado você poderá clicar no link abaixo para acessar os seus produtos para download:';
 $_['text_new_comment']          = 'Os comentários de sua compra são:';
 $_['text_new_footer']           = 'Caso tenha alguma dúvida, responda este e-mail.';
-$_['text_new_powered']          = 'Powered By <a href="http://www.opencart.com">OpenCart</a>.';
+$_['text_new_powered']          = 'Desenvolvido por <a href="http://lojavirtual.digital" target="_blank">LojaVirtual.digital</a>.';
 $_['text_update_subject']       = '%s - Atualização de pedido %s';
 $_['text_update_order']         = 'ID de pedido:';
 $_['text_update_date_added']    = 'Data da compra:';

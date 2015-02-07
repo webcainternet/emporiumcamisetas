@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Feb 06, 2015 at 07:05 PM
+-- Generation Time: Feb 06, 2015 at 11:56 PM
 -- Server version: 5.5.38
 -- PHP Version: 5.3.29
 
@@ -40,14 +40,15 @@ CREATE TABLE `oc_address` (
   `postcode` varchar(10) NOT NULL,
   `country_id` int(11) NOT NULL DEFAULT '0',
   `zone_id` int(11) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_address`
 --
 
 INSERT INTO `oc_address` (`address_id`, `customer_id`, `firstname`, `lastname`, `company`, `company_id`, `tax_id`, `address_1`, `address_2`, `city`, `postcode`, `country_id`, `zone_id`) VALUES
-(1, 1, 'Demo', 'Demo', '', '', '', 'Demo', '', 'Demo', '5555', 222, 3530);
+(1, 1, 'Demo', 'Demo', '', '', '', 'Demo', '', 'Demo', '5555', 222, 3530),
+(2, 2, 'Fernando', 'Mendes', '', '', '', 'Lomas Valentinas', '', 'sao caetano', '09560260', 30, 464);
 
 -- --------------------------------------------------------
 
@@ -150,17 +151,6 @@ CREATE TABLE `oc_attribute_description` (
 --
 
 INSERT INTO `oc_attribute_description` (`attribute_id`, `language_id`, `name`) VALUES
-(1, 1, 'Description'),
-(2, 1, 'No. of Cores'),
-(4, 1, 'test 1'),
-(5, 1, 'test 2'),
-(6, 1, 'test 3'),
-(7, 1, 'test 4'),
-(8, 1, 'test 5'),
-(9, 1, 'test 6'),
-(10, 1, 'test 7'),
-(11, 1, 'test 8'),
-(3, 1, 'Clockspeed'),
 (1, 4, 'Description'),
 (2, 4, 'No. of Cores'),
 (4, 4, 'test 1'),
@@ -211,10 +201,6 @@ CREATE TABLE `oc_attribute_group_description` (
 --
 
 INSERT INTO `oc_attribute_group_description` (`attribute_group_id`, `language_id`, `name`) VALUES
-(3, 1, 'Memory'),
-(4, 1, 'Technical'),
-(5, 1, 'Motherboard'),
-(6, 1, 'Processor'),
 (3, 4, 'Memory'),
 (4, 4, 'Technical'),
 (5, 4, 'Motherboard'),
@@ -251,7 +237,7 @@ CREATE TABLE `oc_banner_image` (
   `banner_id` int(11) NOT NULL,
   `link` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=371 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=374 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_banner_image`
@@ -259,11 +245,11 @@ CREATE TABLE `oc_banner_image` (
 
 INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `link`, `image`) VALUES
 (370, 15, 'index.php?route=product/product&amp;product_id=29', 'data/slide-3.jpg'),
-(366, 16, '', 'no_image.jpg'),
-(365, 16, '', 'no_image.jpg'),
+(372, 16, '', ''),
 (369, 15, 'index.php?route=product/product&amp;product_id=28', 'data/slide-1.jpg'),
 (368, 15, 'index.php?route=product/product&amp;product_id=32', 'data/slide-2.jpg'),
-(367, 16, '', 'no_image.jpg');
+(373, 16, '', ''),
+(371, 16, '', '');
 
 -- --------------------------------------------------------
 
@@ -284,18 +270,12 @@ CREATE TABLE `oc_banner_image_description` (
 --
 
 INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `banner_id`, `title`, `description`) VALUES
-(367, 4, 16, 'banner-2', '&lt;h1&gt;New Collection&lt;/h1&gt;\r\n&lt;h2&gt;From $15.99&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;  '),
-(366, 1, 16, 'banner-3', '&lt;h1&gt;Free Shipping&lt;/h1&gt;\r\n&lt;h2&gt;On orders over $99&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;'),
-(369, 1, 15, 'slide-1', '&lt;h1&gt;Best T-shirts&lt;/h1&gt;\r\n&lt;h2&gt;you could ever imagine&lt;/h2&gt;'),
 (369, 4, 15, 'slide-1', '&lt;h1&gt;Best T-shirts&lt;/h1&gt;\r\n&lt;h2&gt;you could ever imagine&lt;/h2&gt;'),
-(368, 1, 15, 'slide-3', '&lt;h1&gt;What you&lt;/h1&gt;\r\n&lt;h2&gt;wear is what you are.&lt;/h2&gt;'),
-(366, 4, 16, 'banner-3', '&lt;h1&gt;Free Shipping&lt;/h1&gt;\r\n&lt;h2&gt;On orders over $99&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;'),
-(365, 1, 16, 'banner-1', '&lt;h1&gt;Special Offer&lt;/h1&gt;\r\n&lt;h2&gt;Get up to 50% off&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;'),
+(371, 4, 16, 'banner-3', '&lt;h1&gt;Free Shipping&lt;/h1&gt;\r\n&lt;h2&gt;On orders over $99&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;'),
 (368, 4, 15, 'slide-3', '&lt;h1&gt;What you&lt;/h1&gt;\r\n&lt;h2&gt;wear is what you are.&lt;/h2&gt;'),
-(365, 4, 16, 'banner-1', '&lt;h1&gt;Special Offer&lt;/h1&gt;\r\n&lt;h2&gt;Get up to 50% off&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;'),
-(367, 1, 16, 'banner-2', '&lt;h1&gt;New Collection&lt;/h1&gt;\r\n&lt;h2&gt;From $15.99&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;  '),
-(370, 4, 15, 'slide-2', '&lt;h1&gt;Show who&lt;/h1&gt;\r\n&lt;h2&gt;you really are!&lt;/h2&gt;\r\n'),
-(370, 1, 15, 'slide-2', '&lt;h1&gt;Show who&lt;/h1&gt;\r\n&lt;h2&gt;you really are!&lt;/h2&gt;\r\n');
+(372, 4, 16, 'banner-1', '&lt;h1&gt;Special Offer&lt;/h1&gt;\r\n&lt;h2&gt;Get up to 50% off&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;'),
+(373, 4, 16, 'banner-2', '&lt;h1&gt;New Collection&lt;/h1&gt;\r\n&lt;h2&gt;From $15.99&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;  '),
+(370, 4, 15, 'slide-2', '&lt;h1&gt;Show who&lt;/h1&gt;\r\n&lt;h2&gt;you really are!&lt;/h2&gt;\r\n');
 
 -- --------------------------------------------------------
 
@@ -353,18 +333,6 @@ CREATE TABLE `oc_category_description` (
 --
 
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_description`, `meta_keyword`) VALUES
-(17, 1, 'KIDS', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(25, 1, 'GIFTS', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(29, 1, 'Lorem ipsum dolor', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(24, 1, 'OTHER STUFF', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(57, 1, 'GIRLS ', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(35, 1, 'Ut labore et ', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(36, 1, 'Dolore magna aliqua', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(32, 1, 'Tmpor incididunt ', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(31, 1, 'Sed do eiusmod', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(30, 1, 'Ctetur adipisicing ', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(28, 1, 'Sit amet conse ', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(20, 1, 'GUYS', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', 'Example of category description', ''),
 (17, 4, 'KIDS', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
 (25, 4, 'GIFTS', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
 (29, 4, 'Lorem ipsum dolor', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
@@ -883,8 +851,7 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(2, 'US Dollar', 'USD', '$', '', '2', 1.00000000, 1, '2015-02-04 23:54:14'),
-(4, 'Real', 'BRL', 'R$ ', '', '2', 2.74200010, 1, '2015-02-04 23:52:50');
+(4, 'Real', 'BRL', 'R$ ', '', '2', 1.00000000, 1, '2015-02-06 23:12:20');
 
 -- --------------------------------------------------------
 
@@ -912,14 +879,15 @@ CREATE TABLE `oc_customer` (
   `approved` tinyint(1) NOT NULL,
   `token` varchar(255) NOT NULL,
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_customer`
 --
 
 INSERT INTO `oc_customer` (`customer_id`, `store_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `password`, `salt`, `cart`, `wishlist`, `newsletter`, `address_id`, `customer_group_id`, `ip`, `status`, `approved`, `token`, `date_added`) VALUES
-(1, 0, 'Demo', 'Demo', 'admin@admin.com', '555555555555', '', 'a8e36cf1a623773890e55496017a9652ea345a11', '5f5dd0642', 'a:3:{s:4:"46::";i:1;s:4:"43::";i:2;s:4:"29::";i:1;}', 'a:12:{i:0;s:2:"34";i:1;s:2:"40";i:2;s:2:"29";i:3;s:2:"35";i:4;s:2:"30";i:5;s:3:"42;";i:6;s:3:"30;";i:7;s:2:"45";i:8;s:2:"42";i:9;s:2:"49";i:10;s:2:"46";i:11;s:2:"43";}', 0, 1, 1, '192.168.9.1', 1, 1, '', '2014-01-14 09:29:45');
+(1, 0, 'Demo', 'Demo', 'admin@admin.com', '555555555555', '', 'a8e36cf1a623773890e55496017a9652ea345a11', '5f5dd0642', 'a:3:{s:4:"46::";i:1;s:4:"43::";i:2;s:4:"29::";i:1;}', 'a:12:{i:0;s:2:"34";i:1;s:2:"40";i:2;s:2:"29";i:3;s:2:"35";i:4;s:2:"30";i:5;s:3:"42;";i:6;s:3:"30;";i:7;s:2:"45";i:8;s:2:"42";i:9;s:2:"49";i:10;s:2:"46";i:11;s:2:"43";}', 0, 1, 1, '192.168.9.1', 1, 1, '', '2014-01-14 09:29:45'),
+(2, 0, 'Fernando', 'Mendes', 'fernando.mendes@webca.com.br', '11976495157', '', 'd715bf8985a788c53dfb8ab612db1e2560a1abc4', 'c4269f4c1', 'a:1:{s:4:"46::";i:2;}', '', 0, 2, 1, '127.0.0.1', 1, 1, '', '2015-02-06 21:17:01');
 
 -- --------------------------------------------------------
 
@@ -988,7 +956,6 @@ CREATE TABLE `oc_customer_group_description` (
 --
 
 INSERT INTO `oc_customer_group_description` (`customer_group_id`, `language_id`, `name`, `description`) VALUES
-(1, 1, 'Default', 'test'),
 (1, 4, 'Default', 'test');
 
 -- --------------------------------------------------------
@@ -1015,14 +982,15 @@ CREATE TABLE `oc_customer_ip` (
   `customer_id` int(11) NOT NULL,
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_customer_ip`
 --
 
 INSERT INTO `oc_customer_ip` (`customer_ip_id`, `customer_id`, `ip`, `date_added`) VALUES
-(1, 1, '192.168.9.1', '2014-01-14 09:29:51');
+(1, 1, '192.168.9.1', '2014-01-14 09:29:51'),
+(2, 2, '127.0.0.1', '2015-02-06 21:17:02');
 
 -- --------------------------------------------------------
 
@@ -1168,21 +1136,19 @@ CREATE TABLE `oc_extension` (
 `extension_id` int(11) NOT NULL,
   `type` varchar(32) NOT NULL,
   `code` varchar(32) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=496 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=498 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_extension`
 --
 
 INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
-(23, 'payment', 'cod'),
 (22, 'total', 'shipping'),
 (57, 'total', 'sub_total'),
 (58, 'total', 'tax'),
 (59, 'total', 'total'),
 (468, 'module', 'latest'),
 (390, 'total', 'credit'),
-(387, 'shipping', 'flat'),
 (349, 'total', 'handling'),
 (350, 'total', 'low_order_fee'),
 (389, 'total', 'coupon'),
@@ -1190,7 +1156,7 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 (464, 'module', 'account'),
 (393, 'total', 'reward'),
 (398, 'total', 'voucher'),
-(407, 'payment', 'free_checkout'),
+(497, 'payment', 'pagseguro'),
 (444, 'module', 'featured'),
 (440, 'module', 'banner'),
 (467, 'module', 'information'),
@@ -1198,9 +1164,9 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 (466, 'module', 'bestseller'),
 (493, 'module', 'newcarousel'),
 (449, 'module', 'special'),
-(481, 'shipping', 'free'),
 (494, 'module', 'compare'),
-(495, 'module', 'vqmod_manager');
+(495, 'module', 'vqmod_manager'),
+(496, 'shipping', 'correios');
 
 -- --------------------------------------------------------
 
@@ -1313,14 +1279,10 @@ CREATE TABLE `oc_information_description` (
 --
 
 INSERT INTO `oc_information_description` (`information_id`, `language_id`, `title`, `description`) VALUES
-(4, 1, 'About Us', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n'),
-(5, 1, 'Terms &amp; Conditions', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n'),
-(3, 1, 'Privacy Policy', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n'),
-(6, 1, 'Delivery Information', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n'),
-(4, 4, 'About Us', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n'),
-(5, 4, 'Terms &amp; Conditions', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n'),
-(3, 4, 'Privacy Policy', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n'),
-(6, 4, 'Delivery Information', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n');
+(4, 4, 'Sobre nós', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n'),
+(5, 4, 'Termos e condições', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n'),
+(3, 4, 'Políticas de privacidade', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n'),
+(6, 4, 'Informações de entrega', '&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-thumbs-up&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non proident&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-clock-o&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Lorem ipsum dolor sit amet&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-gift&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;conse ctetur adipisicing elit sed do eiusmod tempor incididunt ut labore et&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-refresh&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;Excepteur sint occaecat cupidatat non&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n\r\n&lt;div class=&quot;about-page&quot;&gt;&lt;i class=&quot;fa fa-truck&quot;&gt;&amp;nbsp;&lt;/i&gt;\r\n\r\n&lt;div class=&quot;extra-wrap&quot;&gt;\r\n&lt;h3&gt;proident sunt in culpa qui offici&lt;/h3&gt;\r\n\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam&lt;/p&gt;\r\n&lt;/div&gt;\r\n&lt;/div&gt;\r\n');
 
 -- --------------------------------------------------------
 
@@ -1378,7 +1340,6 @@ CREATE TABLE `oc_language` (
 --
 
 INSERT INTO `oc_language` (`language_id`, `name`, `code`, `locale`, `image`, `directory`, `filename`, `sort_order`, `status`) VALUES
-(1, 'English', 'en', 'en_US.UTF-8,en_US,en-gb,english', 'gb.png', 'english', 'english', 1, 1),
 (4, 'Português (BR)', 'pt-br', 'pt_BR.UTF-8, pt_BR, UTF-8', 'br.png', 'portuguese-br', 'portuguese-br', 0, 1);
 
 -- --------------------------------------------------------
@@ -1476,9 +1437,6 @@ CREATE TABLE `oc_length_class_description` (
 --
 
 INSERT INTO `oc_length_class_description` (`length_class_id`, `language_id`, `title`, `unit`) VALUES
-(1, 1, 'Centimeter', 'cm'),
-(2, 1, 'Millimeter', 'mm'),
-(3, 1, 'Inch', 'in'),
 (1, 4, 'Centimeter', 'cm'),
 (2, 4, 'Millimeter', 'mm'),
 (3, 4, 'Inch', 'in');
@@ -1577,17 +1535,6 @@ CREATE TABLE `oc_option_description` (
 --
 
 INSERT INTO `oc_option_description` (`option_id`, `language_id`, `name`) VALUES
-(1, 1, 'Radio'),
-(2, 1, 'Checkbox'),
-(4, 1, 'Text'),
-(6, 1, 'Textarea'),
-(8, 1, 'Date'),
-(7, 1, 'File'),
-(5, 1, 'Select'),
-(9, 1, 'Time'),
-(10, 1, 'Date &amp; Time'),
-(12, 1, 'Delivery Date'),
-(11, 1, 'Size'),
 (1, 4, 'Radio'),
 (2, 4, 'Checkbox'),
 (4, 4, 'Text'),
@@ -1651,20 +1598,6 @@ CREATE TABLE `oc_option_value_description` (
 --
 
 INSERT INTO `oc_option_value_description` (`option_value_id`, `language_id`, `option_id`, `name`) VALUES
-(43, 1, 1, 'Large'),
-(32, 1, 1, 'Small'),
-(45, 1, 2, 'Checkbox 4'),
-(44, 1, 2, 'Checkbox 3'),
-(31, 1, 1, 'Medium'),
-(42, 1, 5, 'Yellow'),
-(41, 1, 5, 'Green'),
-(39, 1, 5, 'Red'),
-(40, 1, 5, 'Blue'),
-(23, 1, 2, 'Checkbox 1'),
-(24, 1, 2, 'Checkbox 2'),
-(48, 1, 11, 'Large'),
-(47, 1, 11, 'Medium'),
-(46, 1, 11, 'Small'),
 (43, 4, 1, 'Large'),
 (32, 4, 1, 'Small'),
 (45, 4, 2, 'Checkbox 4'),
@@ -1745,14 +1678,15 @@ CREATE TABLE `oc_order` (
   `accept_language` varchar(255) NOT NULL,
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_order`
 --
 
 INSERT INTO `oc_order` (`order_id`, `invoice_no`, `invoice_prefix`, `store_id`, `store_name`, `store_url`, `customer_id`, `customer_group_id`, `firstname`, `lastname`, `email`, `telephone`, `fax`, `payment_firstname`, `payment_lastname`, `payment_company`, `payment_company_id`, `payment_tax_id`, `payment_address_1`, `payment_address_2`, `payment_city`, `payment_postcode`, `payment_country`, `payment_country_id`, `payment_zone`, `payment_zone_id`, `payment_address_format`, `payment_method`, `payment_code`, `shipping_firstname`, `shipping_lastname`, `shipping_company`, `shipping_address_1`, `shipping_address_2`, `shipping_city`, `shipping_postcode`, `shipping_country`, `shipping_country_id`, `shipping_zone`, `shipping_zone_id`, `shipping_address_format`, `shipping_method`, `shipping_code`, `comment`, `total`, `order_status_id`, `affiliate_id`, `commission`, `language_id`, `currency_id`, `currency_code`, `currency_value`, `ip`, `forwarded_ip`, `user_agent`, `accept_language`, `date_added`, `date_modified`) VALUES
-(1, 0, 'INV-2012-00', 0, 'T-Shirts store', 'http://192.168.9.2/+2014/theme401/', 0, 1, 'Demo', 'Demo', 'demo@demo.com', '555555555', '', 'Demo', 'Demo', '', '', '', 'Demo', '', 'Demo', '77777', 'United Kingdom', 222, 'Conwy', 3531, '', 'Cash On Delivery', 'cod', 'Demo', 'Demo', '', 'Demo', '', 'Demo', '77777', 'United Kingdom', 222, 'Conwy', 3531, '', 'Flat Shipping Rate', 'flat.flat', '', 1184.8750, 0, 0, 0.0000, 1, 2, 'USD', 1.00000000, '192.168.9.1', '192.168.9.2', 'Mozilla/5.0 (Windows NT 5.1; rv:28.0) Gecko/20100101 Firefox/28.0', 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3', '2014-04-17 12:20:28', '2014-04-17 12:20:28');
+(1, 0, 'INV-2012-00', 0, 'T-Shirts store', 'http://192.168.9.2/+2014/theme401/', 0, 1, 'Demo', 'Demo', 'demo@demo.com', '555555555', '', 'Demo', 'Demo', '', '', '', 'Demo', '', 'Demo', '77777', 'United Kingdom', 222, 'Conwy', 3531, '', 'Cash On Delivery', 'cod', 'Demo', 'Demo', '', 'Demo', '', 'Demo', '77777', 'United Kingdom', 222, 'Conwy', 3531, '', 'Flat Shipping Rate', 'flat.flat', '', 1184.8750, 0, 0, 0.0000, 1, 2, 'USD', 1.00000000, '192.168.9.1', '192.168.9.2', 'Mozilla/5.0 (Windows NT 5.1; rv:28.0) Gecko/20100101 Firefox/28.0', 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3', '2014-04-17 12:20:28', '2014-04-17 12:20:28'),
+(2, 0, 'EMPORIO-', 0, 'T-Shirts store', 'http://emporiumcamisetas.com.br/', 2, 1, 'Fernando', 'Mendes', 'fernando.mendes@webca.com.br', '11976495157', '', 'Fernando', 'Mendes', '', '', '', 'Lomas Valentinas', '', 'sao caetano', '09560260', 'Brazil', 30, 'São Paulo', 464, '', 'PagSeguro', 'pagseguro', 'Fernando', 'Mendes', '', 'Lomas Valentinas', '', 'sao caetano', '09560260', 'Brazil', 30, 'São Paulo', 464, '', 'PAC. Entrega em 3 dias úteis', 'correios.41106', '', 2015.7550, 7, 0, 0.0000, 4, 4, 'BRL', 1.00000000, '127.0.0.1', '', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.94 Safari/537.36', 'en-US,en;q=0.8,pt;q=0.6', '2015-02-06 21:17:17', '2015-02-06 21:17:22');
 
 -- --------------------------------------------------------
 
@@ -1860,7 +1794,14 @@ CREATE TABLE `oc_order_history` (
   `notify` tinyint(1) NOT NULL DEFAULT '0',
   `comment` text NOT NULL,
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `oc_order_history`
+--
+
+INSERT INTO `oc_order_history` (`order_history_id`, `order_id`, `order_status_id`, `notify`, `comment`, `date_added`) VALUES
+(1, 2, 7, 1, '', '2015-02-06 21:17:22');
 
 -- --------------------------------------------------------
 
@@ -1896,14 +1837,15 @@ CREATE TABLE `oc_order_product` (
   `total` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `tax` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `reward` int(8) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_order_product`
 --
 
 INSERT INTO `oc_order_product` (`order_product_id`, `order_id`, `product_id`, `name`, `model`, `quantity`, `price`, `total`, `tax`, `reward`) VALUES
-(1, 1, 46, 'Esse cillum dolore', 'Product 19', 1, 1000.0000, 1000.0000, 177.0000, 0);
+(1, 1, 46, 'Esse cillum dolore', 'Product 19', 1, 1000.0000, 1000.0000, 177.0000, 0),
+(2, 2, 46, 'Esse cillum dolore', 'Product 19', 2, 1000.0000, 2000.0000, 0.0000, 0);
 
 -- --------------------------------------------------------
 
@@ -1965,20 +1907,6 @@ CREATE TABLE `oc_order_status` (
 --
 
 INSERT INTO `oc_order_status` (`order_status_id`, `language_id`, `name`) VALUES
-(2, 1, 'Processing'),
-(3, 1, 'Shipped'),
-(7, 1, 'Canceled'),
-(5, 1, 'Complete'),
-(8, 1, 'Denied'),
-(9, 1, 'Canceled Reversal'),
-(10, 1, 'Failed'),
-(11, 1, 'Refunded'),
-(12, 1, 'Reversed'),
-(13, 1, 'Chargeback'),
-(1, 1, 'Pending'),
-(16, 1, 'Voided'),
-(15, 1, 'Processed'),
-(14, 1, 'Expired'),
 (2, 4, 'Processing'),
 (3, 4, 'Shipped'),
 (7, 4, 'Canceled'),
@@ -2008,7 +1936,7 @@ CREATE TABLE `oc_order_total` (
   `text` varchar(255) NOT NULL,
   `value` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `sort_order` int(3) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_order_total`
@@ -2019,7 +1947,10 @@ INSERT INTO `oc_order_total` (`order_total_id`, `order_id`, `code`, `title`, `te
 (2, 1, 'shipping', 'Flat Shipping Rate', '$5.00', 5.0000, 3),
 (3, 1, 'tax', 'Eco Tax (-2.00)', '$4.00', 4.0000, 5),
 (4, 1, 'tax', 'VAT (17.5%)', '$175.88', 175.8750, 5),
-(5, 1, 'total', 'Total', '$1,184.88', 1184.8750, 9);
+(5, 1, 'total', 'Total', '$1,184.88', 1184.8750, 9),
+(6, 2, 'sub_total', 'Sub-Total', 'R$ 2.000,00', 2000.0000, 1),
+(7, 2, 'shipping', 'PAC. Entrega em 3 dias úteis', 'R$ 15,76', 15.7550, 3),
+(8, 2, 'total', 'Total', 'R$ 2.015,76', 2015.7550, 9);
 
 -- --------------------------------------------------------
 
@@ -2087,11 +2018,11 @@ CREATE TABLE `oc_product` (
 --
 
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `date_added`, `date_modified`, `viewed`) VALUES
-(28, 'Product 1', '', '', '', '', '', '', '', 938, 7, 'data/product-49.png', 11, 1, 100.0000, 200, 9, '2009-02-03', 146.40000000, 2, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2014-04-17 15:46:33', 0),
+(28, 'Product 1', '', '', '', '', '', '', '', 938, 7, 'data/product-49.png', 11, 1, 100.0000, 200, 9, '2009-02-03', 146.40000000, 2, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2014-04-17 15:46:33', 3),
 (29, 'Product 2', '', '', '', '', '', '', '', 995, 6, 'data/product-07.png', 6, 1, 279.9900, 0, 9, '2009-02-03', 133.00000000, 2, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 0, 1, '2009-02-03 16:42:17', '2014-04-17 15:45:01', 0),
 (30, 'Product 3', '', '', '', '', '', '', '', 699, 6, 'data/product-46.png', 9, 1, 100.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2014-04-17 15:46:26', 0),
 (31, 'Product 4', '', '', '', '', '', '', '', 999, 6, 'data/product-13.png', 5, 1, 80.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 0, 1, '2009-02-03 17:00:10', '2014-04-17 15:45:14', 0),
-(32, 'Product 5', '', '', '', '', '', '', '', 997, 6, 'data/product-04.png', 5, 1, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 17:07:26', '2014-04-17 15:44:55', 0),
+(32, 'Product 5', '', '', '', '', '', '', '', 997, 6, 'data/product-04.png', 5, 1, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 17:07:26', '2014-04-17 15:44:55', 2),
 (33, 'Product 6', '', '', '', '', '', '', '', 984, 6, 'data/product-19.png', 11, 1, 200.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 17:08:31', '2014-04-17 15:45:27', 0),
 (34, 'Product 7', '', '', '', '', '', '', '', 995, 6, 'data/product-31.png', 8, 1, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 18:07:54', '2014-04-17 15:45:49', 0),
 (35, 'Product 8', '', '', '', '', '', '', '', 1000, 5, 'data/product-22.png', 12, 0, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 18:08:31', '2014-04-17 15:45:31', 0),
@@ -2102,7 +2033,7 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (43, 'Product 16', '', '', '', '', '', '', '', 899, 5, 'data/product-01.png', 8, 0, 500.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 21:07:49', '2014-04-17 15:44:49', 0),
 (44, 'Product 17', '', '', '', '', '', '', '', 999, 5, 'data/product-40.png', 12, 1, 1000.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 21:08:00', '2014-04-17 15:46:12', 0),
 (45, 'Product 18', '', '', '', '', '', '', '', 993, 5, 'data/product-10.png', 8, 1, 200.0000, 0, 0, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2014-04-17 15:45:08', 0),
-(46, 'Product 19', '', '', '', '', '', '', '', 995, 5, 'data/product-25.png', 10, 1, 1000.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 21:08:29', '2014-04-17 15:45:37', 0),
+(46, 'Product 19', '', '', '', '', '', '', '', 993, 5, 'data/product-25.png', 10, 1, 1000.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 21:08:29', '2014-04-17 15:45:37', 0),
 (47, 'Product 21', 'sdd', '4578789', '46498', '49894654', '549564', '4684645', '', 1000, 5, 'data/product-37.png', 7, 1, 100.0000, 400, 9, '2009-02-03', 1.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 0, 1, 0, 1, '2009-02-03 21:08:40', '2014-04-17 15:46:01', 0),
 (48, 'product 20', 'test 1', '', '', '', '', '', 'test 2', 994, 5, 'data/product-55.png', 8, 1, 100.0000, 0, 9, '2009-02-08', 1.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-08 17:21:51', '2014-04-17 15:44:43', 0),
 (49, 'SAM1', '', '', '', '', '', '', '', 994, 8, 'data/product-52.png', 0, 1, 199.9900, 0, 9, '2011-04-25', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2011-04-26 08:57:34', '2014-04-17 15:46:39', 0);
@@ -2125,11 +2056,6 @@ CREATE TABLE `oc_product_attribute` (
 --
 
 INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`, `text`) VALUES
-(42, 3, 1, '100mhz'),
-(47, 4, 1, '16GB'),
-(43, 4, 1, '8gb'),
-(43, 2, 1, '1'),
-(47, 2, 1, '4'),
 (42, 3, 4, '100mhz'),
 (47, 4, 4, '16GB'),
 (43, 4, 4, '8gb'),
@@ -2157,25 +2083,6 @@ CREATE TABLE `oc_product_description` (
 --
 
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `meta_description`, `meta_keyword`, `tag`) VALUES
-(29, 1, 'Aperce sit conse', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(30, 1, 'Lorem ipsum dolor sit amet conse ctetur adipisicing eli', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(45, 1, 'Dolor sit amet', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(31, 1, 'Dolor sit amet conse', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(33, 1, 'Ecco enswom sucaal Ecco enswom sucaal', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(43, 1, 'Acicte magna ipsum dolor', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', 'lorem, ipsum, dolore'),
-(32, 1, 'amet dolor sit', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(40, 1, 'Ipsum dolor', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(35, 1, 'Eiusmod tempor', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(42, 1, 'Lorem ipsum dolor sit', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(36, 1, 'Ecco enswom sucaal', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(47, 1, 'Ipsum dolor conse', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(49, 1, 'Mfgna set dolor sit amet', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(41, 1, 'Gyllamn sticba Gyllamn sticba', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(28, 1, 'Magna aliqua tation ullamcorper', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(44, 1, 'ISpsum dolor sit amet', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(46, 1, 'Esse cillum dolore', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(48, 1, 'Ut labore et Ut labore et', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(34, 1, 'Incididunt ut', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
 (29, 4, 'Aperce sit conse', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
 (30, 4, 'Lorem ipsum dolor sit amet conse ctetur adipisicing eli', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
 (45, 4, 'Dolor sit amet', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
@@ -2706,9 +2613,6 @@ CREATE TABLE `oc_return_action` (
 --
 
 INSERT INTO `oc_return_action` (`return_action_id`, `language_id`, `name`) VALUES
-(1, 1, 'Refunded'),
-(2, 1, 'Credit Issued'),
-(3, 1, 'Replacement Sent'),
 (1, 4, 'Refunded'),
 (2, 4, 'Credit Issued'),
 (3, 4, 'Replacement Sent');
@@ -2745,11 +2649,6 @@ CREATE TABLE `oc_return_reason` (
 --
 
 INSERT INTO `oc_return_reason` (`return_reason_id`, `language_id`, `name`) VALUES
-(1, 1, 'Dead On Arrival'),
-(2, 1, 'Received Wrong Item'),
-(3, 1, 'Order Error'),
-(4, 1, 'Faulty, please supply details'),
-(5, 1, 'Other, please supply details'),
 (1, 4, 'Dead On Arrival'),
 (2, 4, 'Received Wrong Item'),
 (3, 4, 'Order Error'),
@@ -2773,9 +2672,6 @@ CREATE TABLE `oc_return_status` (
 --
 
 INSERT INTO `oc_return_status` (`return_status_id`, `language_id`, `name`) VALUES
-(1, 1, 'Pending'),
-(3, 1, 'Complete'),
-(2, 1, 'Awaiting Products'),
 (1, 4, 'Pending'),
 (3, 4, 'Complete'),
 (2, 4, 'Awaiting Products');
@@ -2811,7 +2707,7 @@ CREATE TABLE `oc_setting` (
   `key` varchar(64) NOT NULL,
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=5122 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5257 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_setting`
@@ -2825,31 +2721,22 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `se
 (5, 0, 'total', 'total_sort_order', '9', 0),
 (6, 0, 'total', 'total_status', '1', 0),
 (7, 0, 'tax', 'tax_sort_order', '5', 0),
-(8, 0, 'free_checkout', 'free_checkout_sort_order', '1', 0),
-(9, 0, 'cod', 'cod_sort_order', '5', 0),
-(10, 0, 'cod', 'cod_total', '0.01', 0),
-(11, 0, 'cod', 'cod_order_status_id', '1', 0),
-(12, 0, 'cod', 'cod_geo_zone_id', '0', 0),
-(13, 0, 'cod', 'cod_status', '1', 0),
+(5139, 0, 'pagseguro', 'pagseguro_total', '', 0),
+(5140, 0, 'pagseguro', 'pagseguro_posfixo', '', 0),
+(5142, 0, 'pagseguro', 'pagseguro_order_aguardando_retorno', '7', 0),
+(5141, 0, 'pagseguro', 'pagseguro_tipo_frete', '0', 0),
 (14, 0, 'shipping', 'shipping_status', '1', 0),
 (15, 0, 'shipping', 'shipping_estimator', '1', 0),
 (4800, 0, 'newcarousel', 'newcarousel_module', 'a:1:{i:0;a:7:{s:9:"banner_id";s:2:"15";s:5:"width";s:4:"1920";s:6:"height";s:3:"667";s:9:"layout_id";s:1:"1";s:8:"position";s:10:"header_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
 (27, 0, 'coupon', 'coupon_sort_order', '4', 0),
 (28, 0, 'coupon', 'coupon_status', '1', 0),
-(3047, 0, 'flat', 'flat_sort_order', '1', 0),
-(3046, 0, 'flat', 'flat_status', '1', 0),
-(3045, 0, 'flat', 'flat_geo_zone_id', '0', 0),
-(3044, 0, 'flat', 'flat_tax_class_id', '9', 0),
-(5113, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/jpeg\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/tiff\r\nimage/svg+xml\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/postscript\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
-(5103, 0, 'config', 'config_alert_emails', '', 0),
-(5104, 0, 'config', 'config_fraud_detection', '0', 0),
-(5105, 0, 'config', 'config_fraud_key', '', 0),
-(5106, 0, 'config', 'config_fraud_score', '', 0),
-(5107, 0, 'config', 'config_fraud_status_id', '7', 0),
-(5108, 0, 'config', 'config_secure', '0', 0),
-(5109, 0, 'config', 'config_shared', '0', 0),
-(5110, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwget\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
-(3043, 0, 'flat', 'flat_cost', '5.00', 0),
+(5126, 0, 'correios', 'correios_contrato_codigo', '', 0),
+(5125, 0, 'correios', 'correios_41106', '1', 0),
+(5249, 0, 'config', 'config_maintenance', '0', 0),
+(5246, 0, 'config', 'config_seo_url', '1', 0),
+(5247, 0, 'config', 'config_file_extension_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
+(5248, 0, 'config', 'config_file_mime_allowed', 'text/plain\r\nimage/png\r\nimage/jpeg\r\nimage/jpeg\r\nimage/jpeg\r\nimage/gif\r\nimage/bmp\r\nimage/vnd.microsoft.icon\r\nimage/tiff\r\nimage/tiff\r\nimage/svg+xml\r\nimage/svg+xml\r\napplication/zip\r\napplication/x-rar-compressed\r\napplication/x-msdownload\r\napplication/vnd.ms-cab-compressed\r\naudio/mpeg\r\nvideo/quicktime\r\nvideo/quicktime\r\napplication/pdf\r\nimage/vnd.adobe.photoshop\r\napplication/postscript\r\napplication/postscript\r\napplication/postscript\r\napplication/msword\r\napplication/rtf\r\napplication/vnd.ms-excel\r\napplication/vnd.ms-powerpoint\r\napplication/vnd.oasis.opendocument.text\r\napplication/vnd.oasis.opendocument.spreadsheet', 0),
+(5124, 0, 'correios', 'correios_40215', '1', 0),
 (42, 0, 'credit', 'credit_sort_order', '7', 0),
 (43, 0, 'credit', 'credit_status', '1', 0),
 (53, 0, 'reward', 'reward_sort_order', '2', 0),
@@ -2859,116 +2746,140 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `se
 (4693, 0, 'compare', 'compare_module', 'a:2:{i:0;a:4:{s:9:"layout_id";s:1:"3";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}i:1;a:4:{s:9:"layout_id";s:1:"2";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
 (94, 0, 'voucher', 'voucher_sort_order', '8', 0),
 (95, 0, 'voucher', 'voucher_status', '1', 0),
-(103, 0, 'free_checkout', 'free_checkout_status', '1', 0),
-(104, 0, 'free_checkout', 'free_checkout_order_status_id', '1', 0),
+(5138, 0, 'pagseguro', 'pagseguro_email', 'dw@dw.com.br', 0),
+(5137, 0, 'pagseguro', 'pagseguro_token', '11', 0),
 (4353, 0, 'affiliate', 'affiliate_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:2:"10";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (4134, 0, 'filter', 'filter_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:1:"3";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
 (3579, 0, 'information', 'information_module', 'a:1:{i:0;a:4:{s:9:"layout_id";s:1:"3";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}}', 1),
-(5112, 0, 'config', 'config_file_extension_allowed', 'txt\r\npng\r\njpe\r\njpeg\r\njpg\r\ngif\r\nbmp\r\nico\r\ntiff\r\ntif\r\nsvg\r\nsvgz\r\nzip\r\nrar\r\nmsi\r\ncab\r\nmp3\r\nqt\r\nmov\r\npdf\r\npsd\r\nai\r\neps\r\nps\r\ndoc\r\nrtf\r\nxls\r\nppt\r\nodt\r\nods', 0),
-(5111, 0, 'config', 'config_seo_url', '1', 0),
-(5102, 0, 'config', 'config_account_mail', '0', 0),
-(5101, 0, 'config', 'config_alert_mail', '0', 0),
-(5100, 0, 'config', 'config_smtp_timeout', '5', 0),
-(5099, 0, 'config', 'config_smtp_port', '25', 0),
-(5098, 0, 'config', 'config_smtp_password', '', 0),
-(5097, 0, 'config', 'config_smtp_username', '', 0),
-(5096, 0, 'config', 'config_smtp_host', '', 0),
-(5095, 0, 'config', 'config_mail_parameter', '', 0),
-(5094, 0, 'config', 'config_mail_protocol', 'mail', 0),
-(5093, 0, 'config', 'config_ftp_status', '0', 0),
+(5245, 0, 'config', 'config_robots', 'abot\r\ndbot\r\nebot\r\nhbot\r\nkbot\r\nlbot\r\nmbot\r\nnbot\r\nobot\r\npbot\r\nrbot\r\nsbot\r\ntbot\r\nvbot\r\nybot\r\nzbot\r\nbot.\r\nbot/\r\n_bot\r\n.bot\r\n/bot\r\n-bot\r\n:bot\r\n(bot\r\ncrawl\r\nslurp\r\nspider\r\nseek\r\naccoona\r\nacoon\r\nadressendeutschland\r\nah-ha.com\r\nahoy\r\naltavista\r\nananzi\r\nanthill\r\nappie\r\narachnophilia\r\narale\r\naraneo\r\naranha\r\narchitext\r\naretha\r\narks\r\nasterias\r\natlocal\r\natn\r\natomz\r\naugurfind\r\nbackrub\r\nbannana_bot\r\nbaypup\r\nbdfetch\r\nbig brother\r\nbiglotron\r\nbjaaland\r\nblackwidow\r\nblaiz\r\nblog\r\nblo.\r\nbloodhound\r\nboitho\r\nbooch\r\nbradley\r\nbutterfly\r\ncalif\r\ncassandra\r\nccubee\r\ncfetch\r\ncharlotte\r\nchurl\r\ncienciaficcion\r\ncmc\r\ncollective\r\ncomagent\r\ncombine\r\ncomputingsite\r\ncsci\r\ncurl\r\ncusco\r\ndaumoa\r\ndeepindex\r\ndelorie\r\ndepspid\r\ndeweb\r\ndie blinde kuh\r\ndigger\r\nditto\r\ndmoz\r\ndocomo\r\ndownload express\r\ndtaagent\r\ndwcp\r\nebiness\r\nebingbong\r\ne-collector\r\nejupiter\r\nemacs-w3 search engine\r\nesther\r\nevliya celebi\r\nezresult\r\nfalcon\r\nfelix ide\r\nferret\r\nfetchrover\r\nfido\r\nfindlinks\r\nfireball\r\nfish search\r\nfouineur\r\nfunnelweb\r\ngazz\r\ngcreep\r\ngenieknows\r\ngetterroboplus\r\ngeturl\r\nglx\r\ngoforit\r\ngolem\r\ngrabber\r\ngrapnel\r\ngralon\r\ngriffon\r\ngromit\r\ngrub\r\ngulliver\r\nhamahakki\r\nharvest\r\nhavindex\r\nhelix\r\nheritrix\r\nhku www octopus\r\nhomerweb\r\nhtdig\r\nhtml index\r\nhtml_analyzer\r\nhtmlgobble\r\nhubater\r\nhyper-decontextualizer\r\nia_archiver\r\nibm_planetwide\r\nichiro\r\niconsurf\r\niltrovatore\r\nimage.kapsi.net\r\nimagelock\r\nincywincy\r\nindexer\r\ninfobee\r\ninformant\r\ningrid\r\ninktomisearch.com\r\ninspector web\r\nintelliagent\r\ninternet shinchakubin\r\nip3000\r\niron33\r\nisraeli-search\r\nivia\r\njack\r\njakarta\r\njavabee\r\njetbot\r\njumpstation\r\nkatipo\r\nkdd-explorer\r\nkilroy\r\nknowledge\r\nkototoi\r\nkretrieve\r\nlabelgrabber\r\nlachesis\r\nlarbin\r\nlegs\r\nlibwww\r\nlinkalarm\r\nlink validator\r\nlinkscan\r\nlockon\r\nlwp\r\nlycos\r\nmagpie\r\nmantraagent\r\nmapoftheinternet\r\nmarvin/\r\nmattie\r\nmediafox\r\nmediapartners\r\nmercator\r\nmerzscope\r\nmicrosoft url control\r\nminirank\r\nmiva\r\nmj12\r\nmnogosearch\r\nmoget\r\nmonster\r\nmoose\r\nmotor\r\nmultitext\r\nmuncher\r\nmuscatferret\r\nmwd.search\r\nmyweb\r\nnajdi\r\nnameprotect\r\nnationaldirectory\r\nnazilla\r\nncsa beta\r\nnec-meshexplorer\r\nnederland.zoek\r\nnetcarta webmap engine\r\nnetmechanic\r\nnetresearchserver\r\nnetscoop\r\nnewscan-online\r\nnhse\r\nnokia6682/\r\nnomad\r\nnoyona\r\nnutch\r\nnzexplorer\r\nobjectssearch\r\noccam\r\nomni\r\nopen text\r\nopenfind\r\nopenintelligencedata\r\norb search\r\nosis-project\r\npack rat\r\npageboy\r\npagebull\r\npage_verifier\r\npanscient\r\nparasite\r\npartnersite\r\npatric\r\npear.\r\npegasus\r\nperegrinator\r\npgp key agent\r\nphantom\r\nphpdig\r\npicosearch\r\npiltdownman\r\npimptrain\r\npinpoint\r\npioneer\r\npiranha\r\nplumtreewebaccessor\r\npogodak\r\npoirot\r\npompos\r\npoppelsdorf\r\npoppi\r\npopular iconoclast\r\npsycheclone\r\npublisher\r\npython\r\nrambler\r\nraven search\r\nroach\r\nroad runner\r\nroadhouse\r\nrobbie\r\nrobofox\r\nrobozilla\r\nrules\r\nsalty\r\nsbider\r\nscooter\r\nscoutjet\r\nscrubby\r\nsearch.\r\nsearchprocess\r\nsemanticdiscovery\r\nsenrigan\r\nsg-scout\r\nshai''hulud\r\nshark\r\nshopwiki\r\nsidewinder\r\nsift\r\nsilk\r\nsimmany\r\nsite searcher\r\nsite valet\r\nsitetech-rover\r\nskymob.com\r\nsleek\r\nsmartwit\r\nsna-\r\nsnappy\r\nsnooper\r\nsohu\r\nspeedfind\r\nsphere\r\nsphider\r\nspinner\r\nspyder\r\nsteeler/\r\nsuke\r\nsuntek\r\nsupersnooper\r\nsurfnomore\r\nsven\r\nsygol\r\nszukacz\r\ntach black widow\r\ntarantula\r\ntempleton\r\n/teoma\r\nt-h-u-n-d-e-r-s-t-o-n-e\r\ntheophrastus\r\ntitan\r\ntitin\r\ntkwww\r\ntoutatis\r\nt-rex\r\ntutorgig\r\ntwiceler\r\ntwisted\r\nucsd\r\nudmsearch\r\nurl check\r\nupdated\r\nvagabondo\r\nvalkyrie\r\nverticrawl\r\nvictoria\r\nvision-search\r\nvolcano\r\nvoyager/\r\nvoyager-hc\r\nw3c_validator\r\nw3m2\r\nw3mir\r\nwalker\r\nwallpaper\r\nwanderer\r\nwauuu\r\nwavefire\r\nweb core\r\nweb hopper\r\nweb wombat\r\nwebbandit\r\nwebcatcher\r\nwebcopy\r\nwebfoot\r\nweblayers\r\nweblinker\r\nweblog monitor\r\nwebmirror\r\nwebmonkey\r\nwebquest\r\nwebreaper\r\nwebsitepulse\r\nwebsnarf\r\nwebstolperer\r\nwebvac\r\nwebwalk\r\nwebwatch\r\nwebwombat\r\nwebzinger\r\nwget\r\nwhizbang\r\nwhowhere\r\nwild ferret\r\nworldlight\r\nwwwc\r\nwwwster\r\nxenu\r\nxget\r\nxift\r\nxirq\r\nyandex\r\nyanga\r\nyeti\r\nyodao\r\nzao\r\nzippp\r\nzyborg', 0),
+(5244, 0, 'config', 'config_shared', '0', 0),
+(5243, 0, 'config', 'config_secure', '0', 0),
+(5242, 0, 'config', 'config_fraud_status_id', '7', 0),
+(5241, 0, 'config', 'config_fraud_score', '', 0),
+(5240, 0, 'config', 'config_fraud_key', '', 0),
+(5239, 0, 'config', 'config_fraud_detection', '0', 0),
+(5238, 0, 'config', 'config_alert_emails', '', 0),
+(5237, 0, 'config', 'config_account_mail', '0', 0),
+(5236, 0, 'config', 'config_alert_mail', '0', 0),
 (4801, 0, 'banner', 'banner_module', 'a:1:{i:0;a:7:{s:9:"banner_id";s:2:"16";s:5:"width";s:3:"100";s:6:"height";s:3:"100";s:9:"layout_id";s:1:"1";s:8:"position";s:14:"content_bottom";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"1";}}', 1),
-(5092, 0, 'config', 'config_ftp_root', '', 0),
-(5091, 0, 'config', 'config_ftp_password', '', 0),
-(5090, 0, 'config', 'config_ftp_username', '', 0),
-(5089, 0, 'config', 'config_ftp_port', '21', 0),
-(5088, 0, 'config', 'config_ftp_host', '192.168.9.2', 0),
-(5087, 0, 'config', 'config_image_cart_height', '47', 0),
-(5086, 0, 'config', 'config_image_cart_width', '47', 0),
-(5085, 0, 'config', 'config_image_wishlist_height', '47', 0),
-(5084, 0, 'config', 'config_image_wishlist_width', '47', 0),
-(5083, 0, 'config', 'config_image_compare_height', '90', 0),
-(5082, 0, 'config', 'config_image_compare_width', '90', 0),
-(5081, 0, 'config', 'config_image_related_height', '170', 0),
-(5080, 0, 'config', 'config_image_related_width', '170', 0),
-(5079, 0, 'config', 'config_image_additional_height', '70', 0),
-(5078, 0, 'config', 'config_image_additional_width', '70', 0),
-(5077, 0, 'config', 'config_image_product_height', '270', 0),
-(5076, 0, 'config', 'config_image_product_width', '270', 0),
-(5075, 0, 'config', 'config_image_popup_height', '600', 0),
-(5074, 0, 'config', 'config_image_popup_width', '600', 0),
+(5235, 0, 'config', 'config_smtp_timeout', '5', 0),
+(5234, 0, 'config', 'config_smtp_port', '25', 0),
+(5233, 0, 'config', 'config_smtp_password', '', 0),
+(5232, 0, 'config', 'config_smtp_username', '', 0),
+(5231, 0, 'config', 'config_smtp_host', '', 0),
+(5230, 0, 'config', 'config_mail_parameter', '', 0),
+(5229, 0, 'config', 'config_mail_protocol', 'mail', 0),
+(5228, 0, 'config', 'config_ftp_status', '0', 0),
+(5227, 0, 'config', 'config_ftp_root', '', 0),
+(5226, 0, 'config', 'config_ftp_password', '', 0),
+(5225, 0, 'config', 'config_ftp_username', '', 0),
+(5224, 0, 'config', 'config_ftp_port', '21', 0),
+(5223, 0, 'config', 'config_ftp_host', '192.168.9.2', 0),
+(5221, 0, 'config', 'config_image_cart_width', '47', 0),
+(5222, 0, 'config', 'config_image_cart_height', '47', 0),
+(5220, 0, 'config', 'config_image_wishlist_height', '47', 0),
+(5219, 0, 'config', 'config_image_wishlist_width', '47', 0),
+(5218, 0, 'config', 'config_image_compare_height', '90', 0),
+(5217, 0, 'config', 'config_image_compare_width', '90', 0),
 (2056, 0, 'newslideshow', 'slideshow_module', 'a:1:{i:0;a:7:{s:9:"banner_id";s:2:"14";s:5:"width";s:4:"1000";s:6:"height";s:3:"400";s:9:"layout_id";s:1:"6";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:0:"";}}', 1),
-(5073, 0, 'config', 'config_image_thumb_height', '270', 0),
-(5072, 0, 'config', 'config_image_thumb_width', '270', 0),
-(5071, 0, 'config', 'config_image_category_height', '190', 0),
-(5070, 0, 'config', 'config_image_category_width', '190', 0),
-(5069, 0, 'config', 'config_icon', 'data/favicon.png', 0),
-(3051, 0, 'free', 'free_sort_order', '2', 0),
-(3050, 0, 'free', 'free_status', '0', 0),
-(3049, 0, 'free', 'free_geo_zone_id', '0', 0),
-(3048, 0, 'free', 'free_total', '', 0),
+(5216, 0, 'config', 'config_image_related_height', '170', 0),
+(5215, 0, 'config', 'config_image_related_width', '170', 0),
+(5214, 0, 'config', 'config_image_additional_height', '70', 0),
+(5213, 0, 'config', 'config_image_additional_width', '70', 0),
+(5212, 0, 'config', 'config_image_product_height', '270', 0),
+(5123, 0, 'correios', 'correios_40010', '1', 0),
+(5122, 0, 'correios', 'correios_postcode', '04183-020', 0),
 (4908, 0, 'bestseller', 'bestseller_module', 'a:4:{i:0;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"3";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:1;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"4";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:2;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"2";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:3;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"8";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
-(5068, 0, 'config', 'config_logo', 'data/logo.png', 0),
 (4912, 0, 'latest', 'latest_module', 'a:4:{i:0;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"3";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:1;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"4";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:2;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"9";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:3;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"2";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (4803, 0, 'featured', 'featured_product', '34,46,49,42,45,31,36,35', 0),
 (4804, 0, 'featured', 'featured_module', 'a:1:{i:0;a:7:{s:5:"limit";s:1:"8";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}}', 1),
-(5067, 0, 'config', 'config_return_status_id', '2', 0),
-(5066, 0, 'config', 'config_return_id', '0', 0),
-(5065, 0, 'config', 'config_commission', '5', 0),
-(5064, 0, 'config', 'config_affiliate_id', '4', 0),
-(5063, 0, 'config', 'config_stock_status_id', '5', 0),
-(5062, 0, 'config', 'config_stock_checkout', '0', 0),
-(5061, 0, 'config', 'config_stock_warning', '0', 0),
-(5060, 0, 'config', 'config_stock_display', '0', 0),
-(5059, 0, 'config', 'config_complete_status_id', '5', 0),
-(5058, 0, 'config', 'config_order_status_id', '1', 0),
+(5211, 0, 'config', 'config_image_product_width', '270', 0),
+(5210, 0, 'config', 'config_image_popup_height', '600', 0),
+(5209, 0, 'config', 'config_image_popup_width', '600', 0),
+(5208, 0, 'config', 'config_image_thumb_height', '270', 0),
+(5207, 0, 'config', 'config_image_thumb_width', '270', 0),
+(5206, 0, 'config', 'config_image_category_height', '190', 0),
+(5205, 0, 'config', 'config_image_category_width', '190', 0),
+(5202, 0, 'config', 'config_return_status_id', '2', 0),
+(5203, 0, 'config', 'config_logo', 'data/logo.png', 0),
 (4802, 0, 'featured', 'product', 'e', 0),
-(5057, 0, 'config', 'config_invoice_prefix', 'EMPORIO-', 0),
-(5056, 0, 'config', 'config_order_edit', '100', 0),
-(5055, 0, 'config', 'config_checkout_id', '5', 0),
-(5054, 0, 'config', 'config_guest_checkout', '0', 0),
-(5053, 0, 'config', 'config_cart_weight', '1', 0),
-(5052, 0, 'config', 'config_account_id', '3', 0),
-(5051, 0, 'config', 'config_customer_price', '0', 0),
-(5050, 0, 'config', 'config_customer_group_display', 'a:1:{i:0;s:1:"1";}', 1),
-(5049, 0, 'config', 'config_customer_group_id', '1', 0),
-(5048, 0, 'config', 'config_customer_online', '0', 0),
-(5047, 0, 'config', 'config_tax_customer', 'shipping', 0),
-(5046, 0, 'config', 'config_tax_default', 'shipping', 0),
-(5045, 0, 'config', 'config_vat', '0', 0),
-(5044, 0, 'config', 'config_tax', '1', 0),
-(5043, 0, 'config', 'config_voucher_max', '1000', 0),
-(5042, 0, 'config', 'config_voucher_min', '1', 0),
-(5041, 0, 'config', 'config_download', '0', 0),
-(5040, 0, 'config', 'config_review_status', '0', 0),
-(5039, 0, 'config', 'config_product_count', '1', 0),
-(5037, 0, 'config', 'config_catalog_limit', '6', 0),
-(5038, 0, 'config', 'config_admin_limit', '20', 0),
-(5036, 0, 'config', 'config_weight_class_id', '1', 0),
-(5035, 0, 'config', 'config_length_class_id', '1', 0),
-(5034, 0, 'config', 'config_currency_auto', '1', 0),
-(5033, 0, 'config', 'config_currency', 'BRL', 0),
-(5031, 0, 'config', 'config_language', 'pt-br', 0),
-(5032, 0, 'config', 'config_admin_language', 'pt-br', 0),
-(5030, 0, 'config', 'config_zone_id', '464', 0),
-(5023, 0, 'config', 'config_telephone', '1-800-234-5677', 0),
-(5024, 0, 'config', 'config_fax', '1-800-234-5678', 0),
-(5025, 0, 'config', 'config_title', 'T-Shirts store', 0),
-(5026, 0, 'config', 'config_meta_description', 'T-Shirts store', 0),
-(5027, 0, 'config', 'config_template', 'theme401', 0),
-(5028, 0, 'config', 'config_layout_id', '4', 0),
-(5029, 0, 'config', 'config_country_id', '30', 0),
-(5022, 0, 'config', 'config_email', 'fernando.mendes@webca.com.br', 0),
-(5021, 0, 'config', 'config_address', '8901 Marmora Road, Glasgow, D04 89GR', 0),
-(5020, 0, 'config', 'config_owner', 'T-Shirts store', 0),
-(5019, 0, 'config', 'config_name', 'T-Shirts store', 0),
-(5114, 0, 'config', 'config_maintenance', '0', 0),
-(5115, 0, 'config', 'config_password', '1', 0),
-(5116, 0, 'config', 'config_encryption', '1d15ba06cb310a70e9a1706680e94517', 0),
-(5117, 0, 'config', 'config_compression', '0', 0),
-(5118, 0, 'config', 'config_error_display', '1', 0),
-(5119, 0, 'config', 'config_error_log', '1', 0),
-(5120, 0, 'config', 'config_error_filename', 'error.txt', 0),
-(5121, 0, 'config', 'config_google_analytics', '', 0);
+(5204, 0, 'config', 'config_icon', 'data/favicon.png', 0),
+(5201, 0, 'config', 'config_return_id', '0', 0),
+(5200, 0, 'config', 'config_commission', '5', 0),
+(5199, 0, 'config', 'config_affiliate_id', '4', 0),
+(5198, 0, 'config', 'config_stock_status_id', '5', 0),
+(5197, 0, 'config', 'config_stock_checkout', '0', 0),
+(5196, 0, 'config', 'config_stock_warning', '0', 0),
+(5195, 0, 'config', 'config_stock_display', '0', 0),
+(5194, 0, 'config', 'config_complete_status_id', '5', 0),
+(5193, 0, 'config', 'config_order_status_id', '1', 0),
+(5192, 0, 'config', 'config_invoice_prefix', 'EMPORIO-', 0),
+(5191, 0, 'config', 'config_order_edit', '100', 0),
+(5190, 0, 'config', 'config_checkout_id', '5', 0),
+(5189, 0, 'config', 'config_guest_checkout', '0', 0),
+(5188, 0, 'config', 'config_cart_weight', '1', 0),
+(5187, 0, 'config', 'config_account_id', '3', 0),
+(5185, 0, 'config', 'config_customer_group_display', 'a:1:{i:0;s:1:"1";}', 1),
+(5186, 0, 'config', 'config_customer_price', '0', 0),
+(5184, 0, 'config', 'config_customer_group_id', '1', 0),
+(5183, 0, 'config', 'config_customer_online', '0', 0),
+(5182, 0, 'config', 'config_tax_customer', 'shipping', 0),
+(5180, 0, 'config', 'config_vat', '0', 0),
+(5181, 0, 'config', 'config_tax_default', 'shipping', 0),
+(5179, 0, 'config', 'config_tax', '1', 0),
+(5176, 0, 'config', 'config_download', '0', 0),
+(5177, 0, 'config', 'config_voucher_min', '1', 0),
+(5178, 0, 'config', 'config_voucher_max', '1000', 0),
+(5175, 0, 'config', 'config_review_status', '0', 0),
+(5174, 0, 'config', 'config_product_count', '1', 0),
+(5173, 0, 'config', 'config_admin_limit', '20', 0),
+(5172, 0, 'config', 'config_catalog_limit', '6', 0),
+(5171, 0, 'config', 'config_weight_class_id', '1', 0),
+(5170, 0, 'config', 'config_length_class_id', '1', 0),
+(5169, 0, 'config', 'config_currency_auto', '1', 0),
+(5168, 0, 'config', 'config_currency', 'BRL', 0),
+(5167, 0, 'config', 'config_admin_language', 'pt-br', 0),
+(5165, 0, 'config', 'config_zone_id', '464', 0),
+(5166, 0, 'config', 'config_language', 'pt-br', 0),
+(5164, 0, 'config', 'config_country_id', '30', 0),
+(5158, 0, 'config', 'config_telephone', '11 5555-4444', 0),
+(5159, 0, 'config', 'config_fax', '', 0),
+(5160, 0, 'config', 'config_title', 'Emporium Camisetas', 0),
+(5161, 0, 'config', 'config_meta_description', 'Emporium Camisetas', 0),
+(5162, 0, 'config', 'config_template', 'theme401', 0),
+(5163, 0, 'config', 'config_layout_id', '4', 0),
+(5157, 0, 'config', 'config_email', 'fernando.mendes@webca.com.br', 0),
+(5156, 0, 'config', 'config_address', '8901 Marmora Road, Glasgow, D04 89GR', 0),
+(5155, 0, 'config', 'config_owner', 'Emporium Camisetas', 0),
+(5154, 0, 'config', 'config_name', 'Emporium Camisetas', 0),
+(5127, 0, 'correios', 'correios_contrato_senha', '', 0),
+(5128, 0, 'correios', 'correios_mao_propria', 'n', 0),
+(5129, 0, 'correios', 'correios_aviso_recebimento', 'n', 0),
+(5130, 0, 'correios', 'correios_declarar_valor', 'n', 0),
+(5131, 0, 'correios', 'correios_adicional', '15', 0),
+(5132, 0, 'correios', 'correios_prazo_adicional', '', 0),
+(5133, 0, 'correios', 'correios_tax_class_id', '0', 0),
+(5134, 0, 'correios', 'correios_geo_zone_id', '0', 0),
+(5135, 0, 'correios', 'correios_status', '1', 0),
+(5136, 0, 'correios', 'correios_sort_order', '', 0),
+(5143, 0, 'pagseguro', 'pagseguro_order_aguardando_pagamento', '7', 0),
+(5144, 0, 'pagseguro', 'pagseguro_order_analise', '7', 0),
+(5145, 0, 'pagseguro', 'pagseguro_order_paga', '7', 0),
+(5146, 0, 'pagseguro', 'pagseguro_order_disponivel', '7', 0),
+(5147, 0, 'pagseguro', 'pagseguro_order_disputa', '7', 0),
+(5148, 0, 'pagseguro', 'pagseguro_order_devolvida', '7', 0),
+(5149, 0, 'pagseguro', 'pagseguro_order_cancelada', '7', 0),
+(5150, 0, 'pagseguro', 'pagseguro_update_status_alert', '0', 0),
+(5151, 0, 'pagseguro', 'pagseguro_geo_zone_id', '0', 0),
+(5152, 0, 'pagseguro', 'pagseguro_status', '1', 0),
+(5153, 0, 'pagseguro', 'pagseguro_sort_order', '', 0),
+(5250, 0, 'config', 'config_password', '1', 0),
+(5251, 0, 'config', 'config_encryption', '1d15ba06cb310a70e9a1706680e94517', 0),
+(5252, 0, 'config', 'config_compression', '0', 0),
+(5253, 0, 'config', 'config_error_display', '1', 0),
+(5254, 0, 'config', 'config_error_log', '1', 0),
+(5255, 0, 'config', 'config_error_filename', 'error.txt', 0),
+(5256, 0, 'config', 'config_google_analytics', '', 0);
 
 -- --------------------------------------------------------
 
@@ -2987,10 +2898,6 @@ CREATE TABLE `oc_stock_status` (
 --
 
 INSERT INTO `oc_stock_status` (`stock_status_id`, `language_id`, `name`) VALUES
-(7, 1, 'In Stock'),
-(8, 1, 'Pre-Order'),
-(5, 1, 'Out Of Stock'),
-(6, 1, '2 - 3 Days'),
 (7, 4, 'In Stock'),
 (8, 4, 'Pre-Order'),
 (5, 4, 'Out Of Stock'),
@@ -3108,7 +3015,7 @@ CREATE TABLE `oc_url_alias` (
 `url_alias_id` int(11) NOT NULL,
   `query` varchar(255) NOT NULL,
   `keyword` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=783 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=784 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_url_alias`
@@ -3120,7 +3027,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (503, 'category_id=26', 'pc'),
 (505, 'category_id=27', 'mac'),
 (730, 'manufacturer_id=8', 'apple'),
-(778, 'information_id=4', 'about_us'),
+(783, 'information_id=4', 'about_us'),
 (782, 'product_id=42', 'test'),
 (767, 'category_id=34', 'mp3-players'),
 (779, 'category_id=36', 'Normal');
@@ -3170,7 +3077,7 @@ CREATE TABLE `oc_user_group` (
 --
 
 INSERT INTO `oc_user_group` (`user_group_id`, `name`, `permission`) VALUES
-(1, 'Top Administrator', 'a:2:{s:6:"access";a:150:{i:0;s:17:"catalog/attribute";i:1;s:23:"catalog/attribute_group";i:2;s:16:"catalog/category";i:3;s:16:"catalog/download";i:4;s:14:"catalog/filter";i:5;s:19:"catalog/information";i:6;s:20:"catalog/manufacturer";i:7;s:14:"catalog/option";i:8;s:15:"catalog/product";i:9;s:15:"catalog/profile";i:10;s:14:"catalog/review";i:11;s:18:"common/filemanager";i:12;s:13:"design/banner";i:13;s:19:"design/custom_field";i:14;s:13:"design/layout";i:15;s:14:"extension/feed";i:16;s:17:"extension/manager";i:17;s:16:"extension/module";i:18;s:17:"extension/openbay";i:19;s:17:"extension/payment";i:20;s:18:"extension/shipping";i:21;s:15:"extension/total";i:22;s:16:"feed/google_base";i:23;s:19:"feed/google_sitemap";i:24;s:20:"localisation/country";i:25;s:21:"localisation/currency";i:26;s:21:"localisation/geo_zone";i:27;s:21:"localisation/language";i:28;s:25:"localisation/length_class";i:29;s:25:"localisation/order_status";i:30;s:26:"localisation/return_action";i:31;s:26:"localisation/return_reason";i:32;s:26:"localisation/return_status";i:33;s:25:"localisation/stock_status";i:34;s:22:"localisation/tax_class";i:35;s:21:"localisation/tax_rate";i:36;s:25:"localisation/weight_class";i:37;s:17:"localisation/zone";i:38;s:14:"module/account";i:39;s:16:"module/affiliate";i:40;s:29:"module/amazon_checkout_layout";i:41;s:13:"module/banner";i:42;s:17:"module/bestseller";i:43;s:15:"module/carousel";i:44;s:15:"module/category";i:45;s:18:"module/ebaydisplay";i:46;s:15:"module/featured";i:47;s:13:"module/filter";i:48;s:18:"module/google_talk";i:49;s:18:"module/information";i:50;s:13:"module/latest";i:51;s:17:"module/openbaypro";i:52;s:16:"module/pp_layout";i:53;s:16:"module/slideshow";i:54;s:14:"module/special";i:55;s:12:"module/store";i:56;s:14:"module/welcome";i:57;s:14:"openbay/amazon";i:58;s:22:"openbay/amazon_listing";i:59;s:22:"openbay/amazon_product";i:60;s:16:"openbay/amazonus";i:61;s:24:"openbay/amazonus_listing";i:62;s:24:"openbay/amazonus_product";i:63;s:20:"openbay/ebay_profile";i:64;s:21:"openbay/ebay_template";i:65;s:15:"openbay/openbay";i:66;s:23:"payment/amazon_checkout";i:67;s:24:"payment/authorizenet_aim";i:68;s:21:"payment/bank_transfer";i:69;s:14:"payment/cheque";i:70;s:11:"payment/cod";i:71;s:21:"payment/free_checkout";i:72;s:22:"payment/klarna_account";i:73;s:22:"payment/klarna_invoice";i:74;s:14:"payment/liqpay";i:75;s:20:"payment/moneybookers";i:76;s:14:"payment/nochex";i:77;s:15:"payment/paymate";i:78;s:16:"payment/paypoint";i:79;s:13:"payment/payza";i:80;s:26:"payment/perpetual_payments";i:81;s:18:"payment/pp_express";i:82;s:25:"payment/pp_payflow_iframe";i:83;s:14:"payment/pp_pro";i:84;s:21:"payment/pp_pro_iframe";i:85;s:17:"payment/pp_pro_pf";i:86;s:17:"payment/pp_pro_uk";i:87;s:19:"payment/pp_standard";i:88;s:15:"payment/sagepay";i:89;s:22:"payment/sagepay_direct";i:90;s:18:"payment/sagepay_us";i:91;s:19:"payment/twocheckout";i:92;s:28:"payment/web_payment_software";i:93;s:16:"payment/worldpay";i:94;s:27:"report/affiliate_commission";i:95;s:22:"report/customer_credit";i:96;s:22:"report/customer_online";i:97;s:21:"report/customer_order";i:98;s:22:"report/customer_reward";i:99;s:24:"report/product_purchased";i:100;s:21:"report/product_viewed";i:101;s:18:"report/sale_coupon";i:102;s:17:"report/sale_order";i:103;s:18:"report/sale_return";i:104;s:20:"report/sale_shipping";i:105;s:15:"report/sale_tax";i:106;s:14:"sale/affiliate";i:107;s:12:"sale/contact";i:108;s:11:"sale/coupon";i:109;s:13:"sale/customer";i:110;s:20:"sale/customer_ban_ip";i:111;s:19:"sale/customer_group";i:112;s:10:"sale/order";i:113;s:14:"sale/recurring";i:114;s:11:"sale/return";i:115;s:12:"sale/voucher";i:116;s:18:"sale/voucher_theme";i:117;s:15:"setting/setting";i:118;s:13:"setting/store";i:119;s:16:"shipping/auspost";i:120;s:17:"shipping/citylink";i:121;s:14:"shipping/fedex";i:122;s:13:"shipping/flat";i:123;s:13:"shipping/free";i:124;s:13:"shipping/item";i:125;s:23:"shipping/parcelforce_48";i:126;s:15:"shipping/pickup";i:127;s:19:"shipping/royal_mail";i:128;s:12:"shipping/ups";i:129;s:13:"shipping/usps";i:130;s:15:"shipping/weight";i:131;s:11:"tool/backup";i:132;s:14:"tool/error_log";i:133;s:12:"total/coupon";i:134;s:12:"total/credit";i:135;s:14:"total/handling";i:136;s:16:"total/klarna_fee";i:137;s:19:"total/low_order_fee";i:138;s:12:"total/reward";i:139;s:14:"total/shipping";i:140;s:15:"total/sub_total";i:141;s:9:"total/tax";i:142;s:11:"total/total";i:143;s:13:"total/voucher";i:144;s:9:"user/user";i:145;s:20:"user/user_permission";i:146;s:14:"module/welcome";i:147;s:18:"module/newcarousel";i:148;s:14:"module/compare";i:149;s:20:"module/vqmod_manager";}s:6:"modify";a:150:{i:0;s:17:"catalog/attribute";i:1;s:23:"catalog/attribute_group";i:2;s:16:"catalog/category";i:3;s:16:"catalog/download";i:4;s:14:"catalog/filter";i:5;s:19:"catalog/information";i:6;s:20:"catalog/manufacturer";i:7;s:14:"catalog/option";i:8;s:15:"catalog/product";i:9;s:15:"catalog/profile";i:10;s:14:"catalog/review";i:11;s:18:"common/filemanager";i:12;s:13:"design/banner";i:13;s:19:"design/custom_field";i:14;s:13:"design/layout";i:15;s:14:"extension/feed";i:16;s:17:"extension/manager";i:17;s:16:"extension/module";i:18;s:17:"extension/openbay";i:19;s:17:"extension/payment";i:20;s:18:"extension/shipping";i:21;s:15:"extension/total";i:22;s:16:"feed/google_base";i:23;s:19:"feed/google_sitemap";i:24;s:20:"localisation/country";i:25;s:21:"localisation/currency";i:26;s:21:"localisation/geo_zone";i:27;s:21:"localisation/language";i:28;s:25:"localisation/length_class";i:29;s:25:"localisation/order_status";i:30;s:26:"localisation/return_action";i:31;s:26:"localisation/return_reason";i:32;s:26:"localisation/return_status";i:33;s:25:"localisation/stock_status";i:34;s:22:"localisation/tax_class";i:35;s:21:"localisation/tax_rate";i:36;s:25:"localisation/weight_class";i:37;s:17:"localisation/zone";i:38;s:14:"module/account";i:39;s:16:"module/affiliate";i:40;s:29:"module/amazon_checkout_layout";i:41;s:13:"module/banner";i:42;s:17:"module/bestseller";i:43;s:15:"module/carousel";i:44;s:15:"module/category";i:45;s:18:"module/ebaydisplay";i:46;s:15:"module/featured";i:47;s:13:"module/filter";i:48;s:18:"module/google_talk";i:49;s:18:"module/information";i:50;s:13:"module/latest";i:51;s:17:"module/openbaypro";i:52;s:16:"module/pp_layout";i:53;s:16:"module/slideshow";i:54;s:14:"module/special";i:55;s:12:"module/store";i:56;s:14:"module/welcome";i:57;s:14:"openbay/amazon";i:58;s:22:"openbay/amazon_listing";i:59;s:22:"openbay/amazon_product";i:60;s:16:"openbay/amazonus";i:61;s:24:"openbay/amazonus_listing";i:62;s:24:"openbay/amazonus_product";i:63;s:20:"openbay/ebay_profile";i:64;s:21:"openbay/ebay_template";i:65;s:15:"openbay/openbay";i:66;s:23:"payment/amazon_checkout";i:67;s:24:"payment/authorizenet_aim";i:68;s:21:"payment/bank_transfer";i:69;s:14:"payment/cheque";i:70;s:11:"payment/cod";i:71;s:21:"payment/free_checkout";i:72;s:22:"payment/klarna_account";i:73;s:22:"payment/klarna_invoice";i:74;s:14:"payment/liqpay";i:75;s:20:"payment/moneybookers";i:76;s:14:"payment/nochex";i:77;s:15:"payment/paymate";i:78;s:16:"payment/paypoint";i:79;s:13:"payment/payza";i:80;s:26:"payment/perpetual_payments";i:81;s:18:"payment/pp_express";i:82;s:25:"payment/pp_payflow_iframe";i:83;s:14:"payment/pp_pro";i:84;s:21:"payment/pp_pro_iframe";i:85;s:17:"payment/pp_pro_pf";i:86;s:17:"payment/pp_pro_uk";i:87;s:19:"payment/pp_standard";i:88;s:15:"payment/sagepay";i:89;s:22:"payment/sagepay_direct";i:90;s:18:"payment/sagepay_us";i:91;s:19:"payment/twocheckout";i:92;s:28:"payment/web_payment_software";i:93;s:16:"payment/worldpay";i:94;s:27:"report/affiliate_commission";i:95;s:22:"report/customer_credit";i:96;s:22:"report/customer_online";i:97;s:21:"report/customer_order";i:98;s:22:"report/customer_reward";i:99;s:24:"report/product_purchased";i:100;s:21:"report/product_viewed";i:101;s:18:"report/sale_coupon";i:102;s:17:"report/sale_order";i:103;s:18:"report/sale_return";i:104;s:20:"report/sale_shipping";i:105;s:15:"report/sale_tax";i:106;s:14:"sale/affiliate";i:107;s:12:"sale/contact";i:108;s:11:"sale/coupon";i:109;s:13:"sale/customer";i:110;s:20:"sale/customer_ban_ip";i:111;s:19:"sale/customer_group";i:112;s:10:"sale/order";i:113;s:14:"sale/recurring";i:114;s:11:"sale/return";i:115;s:12:"sale/voucher";i:116;s:18:"sale/voucher_theme";i:117;s:15:"setting/setting";i:118;s:13:"setting/store";i:119;s:16:"shipping/auspost";i:120;s:17:"shipping/citylink";i:121;s:14:"shipping/fedex";i:122;s:13:"shipping/flat";i:123;s:13:"shipping/free";i:124;s:13:"shipping/item";i:125;s:23:"shipping/parcelforce_48";i:126;s:15:"shipping/pickup";i:127;s:19:"shipping/royal_mail";i:128;s:12:"shipping/ups";i:129;s:13:"shipping/usps";i:130;s:15:"shipping/weight";i:131;s:11:"tool/backup";i:132;s:14:"tool/error_log";i:133;s:12:"total/coupon";i:134;s:12:"total/credit";i:135;s:14:"total/handling";i:136;s:16:"total/klarna_fee";i:137;s:19:"total/low_order_fee";i:138;s:12:"total/reward";i:139;s:14:"total/shipping";i:140;s:15:"total/sub_total";i:141;s:9:"total/tax";i:142;s:11:"total/total";i:143;s:13:"total/voucher";i:144;s:9:"user/user";i:145;s:20:"user/user_permission";i:146;s:14:"module/welcome";i:147;s:18:"module/newcarousel";i:148;s:14:"module/compare";i:149;s:20:"module/vqmod_manager";}}'),
+(1, 'Top Administrator', 'a:2:{s:6:"access";a:152:{i:0;s:17:"catalog/attribute";i:1;s:23:"catalog/attribute_group";i:2;s:16:"catalog/category";i:3;s:16:"catalog/download";i:4;s:14:"catalog/filter";i:5;s:19:"catalog/information";i:6;s:20:"catalog/manufacturer";i:7;s:14:"catalog/option";i:8;s:15:"catalog/product";i:9;s:15:"catalog/profile";i:10;s:14:"catalog/review";i:11;s:18:"common/filemanager";i:12;s:13:"design/banner";i:13;s:19:"design/custom_field";i:14;s:13:"design/layout";i:15;s:14:"extension/feed";i:16;s:17:"extension/manager";i:17;s:16:"extension/module";i:18;s:17:"extension/openbay";i:19;s:17:"extension/payment";i:20;s:18:"extension/shipping";i:21;s:15:"extension/total";i:22;s:16:"feed/google_base";i:23;s:19:"feed/google_sitemap";i:24;s:20:"localisation/country";i:25;s:21:"localisation/currency";i:26;s:21:"localisation/geo_zone";i:27;s:21:"localisation/language";i:28;s:25:"localisation/length_class";i:29;s:25:"localisation/order_status";i:30;s:26:"localisation/return_action";i:31;s:26:"localisation/return_reason";i:32;s:26:"localisation/return_status";i:33;s:25:"localisation/stock_status";i:34;s:22:"localisation/tax_class";i:35;s:21:"localisation/tax_rate";i:36;s:25:"localisation/weight_class";i:37;s:17:"localisation/zone";i:38;s:14:"module/account";i:39;s:16:"module/affiliate";i:40;s:29:"module/amazon_checkout_layout";i:41;s:13:"module/banner";i:42;s:17:"module/bestseller";i:43;s:15:"module/carousel";i:44;s:15:"module/category";i:45;s:18:"module/ebaydisplay";i:46;s:15:"module/featured";i:47;s:13:"module/filter";i:48;s:18:"module/google_talk";i:49;s:18:"module/information";i:50;s:13:"module/latest";i:51;s:17:"module/openbaypro";i:52;s:16:"module/pp_layout";i:53;s:16:"module/slideshow";i:54;s:14:"module/special";i:55;s:12:"module/store";i:56;s:14:"module/welcome";i:57;s:14:"openbay/amazon";i:58;s:22:"openbay/amazon_listing";i:59;s:22:"openbay/amazon_product";i:60;s:16:"openbay/amazonus";i:61;s:24:"openbay/amazonus_listing";i:62;s:24:"openbay/amazonus_product";i:63;s:20:"openbay/ebay_profile";i:64;s:21:"openbay/ebay_template";i:65;s:15:"openbay/openbay";i:66;s:23:"payment/amazon_checkout";i:67;s:24:"payment/authorizenet_aim";i:68;s:21:"payment/bank_transfer";i:69;s:14:"payment/cheque";i:70;s:11:"payment/cod";i:71;s:21:"payment/free_checkout";i:72;s:22:"payment/klarna_account";i:73;s:22:"payment/klarna_invoice";i:74;s:14:"payment/liqpay";i:75;s:20:"payment/moneybookers";i:76;s:14:"payment/nochex";i:77;s:15:"payment/paymate";i:78;s:16:"payment/paypoint";i:79;s:13:"payment/payza";i:80;s:26:"payment/perpetual_payments";i:81;s:18:"payment/pp_express";i:82;s:25:"payment/pp_payflow_iframe";i:83;s:14:"payment/pp_pro";i:84;s:21:"payment/pp_pro_iframe";i:85;s:17:"payment/pp_pro_pf";i:86;s:17:"payment/pp_pro_uk";i:87;s:19:"payment/pp_standard";i:88;s:15:"payment/sagepay";i:89;s:22:"payment/sagepay_direct";i:90;s:18:"payment/sagepay_us";i:91;s:19:"payment/twocheckout";i:92;s:28:"payment/web_payment_software";i:93;s:16:"payment/worldpay";i:94;s:27:"report/affiliate_commission";i:95;s:22:"report/customer_credit";i:96;s:22:"report/customer_online";i:97;s:21:"report/customer_order";i:98;s:22:"report/customer_reward";i:99;s:24:"report/product_purchased";i:100;s:21:"report/product_viewed";i:101;s:18:"report/sale_coupon";i:102;s:17:"report/sale_order";i:103;s:18:"report/sale_return";i:104;s:20:"report/sale_shipping";i:105;s:15:"report/sale_tax";i:106;s:14:"sale/affiliate";i:107;s:12:"sale/contact";i:108;s:11:"sale/coupon";i:109;s:13:"sale/customer";i:110;s:20:"sale/customer_ban_ip";i:111;s:19:"sale/customer_group";i:112;s:10:"sale/order";i:113;s:14:"sale/recurring";i:114;s:11:"sale/return";i:115;s:12:"sale/voucher";i:116;s:18:"sale/voucher_theme";i:117;s:15:"setting/setting";i:118;s:13:"setting/store";i:119;s:16:"shipping/auspost";i:120;s:17:"shipping/citylink";i:121;s:14:"shipping/fedex";i:122;s:13:"shipping/flat";i:123;s:13:"shipping/free";i:124;s:13:"shipping/item";i:125;s:23:"shipping/parcelforce_48";i:126;s:15:"shipping/pickup";i:127;s:19:"shipping/royal_mail";i:128;s:12:"shipping/ups";i:129;s:13:"shipping/usps";i:130;s:15:"shipping/weight";i:131;s:11:"tool/backup";i:132;s:14:"tool/error_log";i:133;s:12:"total/coupon";i:134;s:12:"total/credit";i:135;s:14:"total/handling";i:136;s:16:"total/klarna_fee";i:137;s:19:"total/low_order_fee";i:138;s:12:"total/reward";i:139;s:14:"total/shipping";i:140;s:15:"total/sub_total";i:141;s:9:"total/tax";i:142;s:11:"total/total";i:143;s:13:"total/voucher";i:144;s:9:"user/user";i:145;s:20:"user/user_permission";i:146;s:14:"module/welcome";i:147;s:18:"module/newcarousel";i:148;s:14:"module/compare";i:149;s:20:"module/vqmod_manager";i:150;s:17:"shipping/correios";i:151;s:17:"payment/pagseguro";}s:6:"modify";a:152:{i:0;s:17:"catalog/attribute";i:1;s:23:"catalog/attribute_group";i:2;s:16:"catalog/category";i:3;s:16:"catalog/download";i:4;s:14:"catalog/filter";i:5;s:19:"catalog/information";i:6;s:20:"catalog/manufacturer";i:7;s:14:"catalog/option";i:8;s:15:"catalog/product";i:9;s:15:"catalog/profile";i:10;s:14:"catalog/review";i:11;s:18:"common/filemanager";i:12;s:13:"design/banner";i:13;s:19:"design/custom_field";i:14;s:13:"design/layout";i:15;s:14:"extension/feed";i:16;s:17:"extension/manager";i:17;s:16:"extension/module";i:18;s:17:"extension/openbay";i:19;s:17:"extension/payment";i:20;s:18:"extension/shipping";i:21;s:15:"extension/total";i:22;s:16:"feed/google_base";i:23;s:19:"feed/google_sitemap";i:24;s:20:"localisation/country";i:25;s:21:"localisation/currency";i:26;s:21:"localisation/geo_zone";i:27;s:21:"localisation/language";i:28;s:25:"localisation/length_class";i:29;s:25:"localisation/order_status";i:30;s:26:"localisation/return_action";i:31;s:26:"localisation/return_reason";i:32;s:26:"localisation/return_status";i:33;s:25:"localisation/stock_status";i:34;s:22:"localisation/tax_class";i:35;s:21:"localisation/tax_rate";i:36;s:25:"localisation/weight_class";i:37;s:17:"localisation/zone";i:38;s:14:"module/account";i:39;s:16:"module/affiliate";i:40;s:29:"module/amazon_checkout_layout";i:41;s:13:"module/banner";i:42;s:17:"module/bestseller";i:43;s:15:"module/carousel";i:44;s:15:"module/category";i:45;s:18:"module/ebaydisplay";i:46;s:15:"module/featured";i:47;s:13:"module/filter";i:48;s:18:"module/google_talk";i:49;s:18:"module/information";i:50;s:13:"module/latest";i:51;s:17:"module/openbaypro";i:52;s:16:"module/pp_layout";i:53;s:16:"module/slideshow";i:54;s:14:"module/special";i:55;s:12:"module/store";i:56;s:14:"module/welcome";i:57;s:14:"openbay/amazon";i:58;s:22:"openbay/amazon_listing";i:59;s:22:"openbay/amazon_product";i:60;s:16:"openbay/amazonus";i:61;s:24:"openbay/amazonus_listing";i:62;s:24:"openbay/amazonus_product";i:63;s:20:"openbay/ebay_profile";i:64;s:21:"openbay/ebay_template";i:65;s:15:"openbay/openbay";i:66;s:23:"payment/amazon_checkout";i:67;s:24:"payment/authorizenet_aim";i:68;s:21:"payment/bank_transfer";i:69;s:14:"payment/cheque";i:70;s:11:"payment/cod";i:71;s:21:"payment/free_checkout";i:72;s:22:"payment/klarna_account";i:73;s:22:"payment/klarna_invoice";i:74;s:14:"payment/liqpay";i:75;s:20:"payment/moneybookers";i:76;s:14:"payment/nochex";i:77;s:15:"payment/paymate";i:78;s:16:"payment/paypoint";i:79;s:13:"payment/payza";i:80;s:26:"payment/perpetual_payments";i:81;s:18:"payment/pp_express";i:82;s:25:"payment/pp_payflow_iframe";i:83;s:14:"payment/pp_pro";i:84;s:21:"payment/pp_pro_iframe";i:85;s:17:"payment/pp_pro_pf";i:86;s:17:"payment/pp_pro_uk";i:87;s:19:"payment/pp_standard";i:88;s:15:"payment/sagepay";i:89;s:22:"payment/sagepay_direct";i:90;s:18:"payment/sagepay_us";i:91;s:19:"payment/twocheckout";i:92;s:28:"payment/web_payment_software";i:93;s:16:"payment/worldpay";i:94;s:27:"report/affiliate_commission";i:95;s:22:"report/customer_credit";i:96;s:22:"report/customer_online";i:97;s:21:"report/customer_order";i:98;s:22:"report/customer_reward";i:99;s:24:"report/product_purchased";i:100;s:21:"report/product_viewed";i:101;s:18:"report/sale_coupon";i:102;s:17:"report/sale_order";i:103;s:18:"report/sale_return";i:104;s:20:"report/sale_shipping";i:105;s:15:"report/sale_tax";i:106;s:14:"sale/affiliate";i:107;s:12:"sale/contact";i:108;s:11:"sale/coupon";i:109;s:13:"sale/customer";i:110;s:20:"sale/customer_ban_ip";i:111;s:19:"sale/customer_group";i:112;s:10:"sale/order";i:113;s:14:"sale/recurring";i:114;s:11:"sale/return";i:115;s:12:"sale/voucher";i:116;s:18:"sale/voucher_theme";i:117;s:15:"setting/setting";i:118;s:13:"setting/store";i:119;s:16:"shipping/auspost";i:120;s:17:"shipping/citylink";i:121;s:14:"shipping/fedex";i:122;s:13:"shipping/flat";i:123;s:13:"shipping/free";i:124;s:13:"shipping/item";i:125;s:23:"shipping/parcelforce_48";i:126;s:15:"shipping/pickup";i:127;s:19:"shipping/royal_mail";i:128;s:12:"shipping/ups";i:129;s:13:"shipping/usps";i:130;s:15:"shipping/weight";i:131;s:11:"tool/backup";i:132;s:14:"tool/error_log";i:133;s:12:"total/coupon";i:134;s:12:"total/credit";i:135;s:14:"total/handling";i:136;s:16:"total/klarna_fee";i:137;s:19:"total/low_order_fee";i:138;s:12:"total/reward";i:139;s:14:"total/shipping";i:140;s:15:"total/sub_total";i:141;s:9:"total/tax";i:142;s:11:"total/total";i:143;s:13:"total/voucher";i:144;s:9:"user/user";i:145;s:20:"user/user_permission";i:146;s:14:"module/welcome";i:147;s:18:"module/newcarousel";i:148;s:14:"module/compare";i:149;s:20:"module/vqmod_manager";i:150;s:17:"shipping/correios";i:151;s:17:"payment/pagseguro";}}'),
 (10, 'Demonstration', '');
 
 -- --------------------------------------------------------
@@ -3245,9 +3152,6 @@ CREATE TABLE `oc_voucher_theme_description` (
 --
 
 INSERT INTO `oc_voucher_theme_description` (`voucher_theme_id`, `language_id`, `name`) VALUES
-(6, 1, 'Christmas'),
-(7, 1, 'Birthday'),
-(8, 1, 'General'),
 (6, 4, 'Christmas'),
 (7, 4, 'Birthday'),
 (8, 4, 'General');
@@ -3291,10 +3195,6 @@ CREATE TABLE `oc_weight_class_description` (
 --
 
 INSERT INTO `oc_weight_class_description` (`weight_class_id`, `language_id`, `title`, `unit`) VALUES
-(1, 1, 'Kilogram', 'kg'),
-(2, 1, 'Gram', 'g'),
-(5, 1, 'Pound ', 'lb'),
-(6, 1, 'Ounce', 'oz'),
 (1, 4, 'Kilogram', 'kg'),
 (2, 4, 'Gram', 'g'),
 (5, 4, 'Pound ', 'lb'),
@@ -8032,7 +7932,7 @@ ALTER TABLE `oc_zone_to_geo_zone`
 -- AUTO_INCREMENT for table `oc_address`
 --
 ALTER TABLE `oc_address`
-MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `oc_affiliate`
 --
@@ -8062,7 +7962,7 @@ MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 -- AUTO_INCREMENT for table `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
-MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=371;
+MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=374;
 --
 -- AUTO_INCREMENT for table `oc_category`
 --
@@ -8097,7 +7997,7 @@ MODIFY `currency_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 -- AUTO_INCREMENT for table `oc_customer`
 --
 ALTER TABLE `oc_customer`
-MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `oc_customer_ban_ip`
 --
@@ -8117,7 +8017,7 @@ MODIFY `customer_history_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `oc_customer_ip`
 --
 ALTER TABLE `oc_customer_ip`
-MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `customer_ip_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `oc_customer_reward`
 --
@@ -8147,7 +8047,7 @@ MODIFY `download_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `oc_extension`
 --
 ALTER TABLE `oc_extension`
-MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=496;
+MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=498;
 --
 -- AUTO_INCREMENT for table `oc_filter`
 --
@@ -8212,7 +8112,7 @@ MODIFY `option_value_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=49;
 -- AUTO_INCREMENT for table `oc_order`
 --
 ALTER TABLE `oc_order`
-MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `oc_order_download`
 --
@@ -8222,7 +8122,7 @@ MODIFY `order_download_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `oc_order_history`
 --
 ALTER TABLE `oc_order_history`
-MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `order_history_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `oc_order_option`
 --
@@ -8232,7 +8132,7 @@ MODIFY `order_option_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `oc_order_product`
 --
 ALTER TABLE `oc_order_product`
-MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `order_product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `oc_order_recurring`
 --
@@ -8252,7 +8152,7 @@ MODIFY `order_status_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 -- AUTO_INCREMENT for table `oc_order_total`
 --
 ALTER TABLE `oc_order_total`
-MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `order_total_id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `oc_order_voucher`
 --
@@ -8332,7 +8232,7 @@ MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `oc_setting`
 --
 ALTER TABLE `oc_setting`
-MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5122;
+MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5257;
 --
 -- AUTO_INCREMENT for table `oc_stock_status`
 --
@@ -8362,7 +8262,7 @@ MODIFY `tax_rule_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=129;
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=783;
+MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=784;
 --
 -- AUTO_INCREMENT for table `oc_user`
 --
