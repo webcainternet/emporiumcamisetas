@@ -51,6 +51,7 @@
 					<li><a href="#"><i class="fa fa-rss-square"></i><?php echo $text_rss; ?></a></li>
 				</ul>
 			</div>
+			<!-- 
 			<div class="col-sm-2">
 				<h3><?php echo $text_support; ?></h3>
 				<div class="foot-phone">
@@ -63,6 +64,7 @@
 					
 				</ul>
 			</div>
+			-->
 		</div>
 		
 	</div>

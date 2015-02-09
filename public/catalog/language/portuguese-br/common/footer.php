@@ -18,7 +18,7 @@ $_['text_newsletter']   = 'Boletim Informativo';
 $_['text_powered']      = 'Desenvolvido por <a href="http://lojavirtual.digital" target="_blank">LojaVirtual.digital</a> - %s &copy; %s';
 $_['text_follow']       = 'Siga nos';
 $_['text_support']      = 'Atendimento';
-$_['text_fb']           = 'LinkFacebook';
+$_['text_fb']           = '<a href="https://www.facebook.com/pages/Emporium-Camisetas/759556214110407?sk=info&tab=page_info">Emporium-Camisetas</a>';
 $_['text_twi']          = 'LinkTwitter';
 $_['text_rss']          = 'RSS';
 
