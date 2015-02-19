@@ -237,7 +237,7 @@
 	padding: 0;
 	text-align:center;
 	position:absolute;
-	bottom:20%;
+	bottom:-40px;
 	width:100%;
 }
 .camera_wrap .camera_pag .camera_pag_ul li {
@@ -466,7 +466,7 @@
 	
 }
 .camera_wrap .camera_pag .camera_pag_ul li {
-	background: #fff;
+	/* background: #fff; */
 }
 .camera_thumbs_cont ul li > img {
 	border-color: 1px solid #000;
