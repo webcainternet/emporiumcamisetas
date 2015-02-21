@@ -3174,7 +3174,9 @@ span.toggle {
 	overflow:hidden;
 	}
 .content_bottom {
-	background:url(../image/bg-banner.jpg) repeat center top;
+	/* background:url(../image/bg-banner.jpg) repeat center top; */
+	background:url(/image/data/bgbottom.jpg) repeat center top;
+	background-size: 100%;
 	margin:0 -100%;
 	padding:78px 0
 	}
@@ -3216,7 +3218,7 @@ span.toggle {
 	font-size:70px;
 	line-height:67px;
 	font-weight:400;
-	color:#fff;
+	color:#333;
 	margin:0px;
 	text-transform:none;
 	}

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Feb 19, 2015 at 01:21 AM
+-- Generation Time: Feb 21, 2015 at 06:58 PM
 -- Server version: 5.5.38
 -- PHP Version: 5.3.29
 
@@ -304,13 +304,6 @@ INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`,
 (20, 'data/Anycool T818  1 copy.png', 0, 1, 1, 1, 1, '2009-01-05 21:49:43', '2015-02-19 00:55:01'),
 (24, 'data/FLY E176 1 copy.png', 0, 1, 1, 4, 1, '2009-01-20 02:36:26', '2015-02-19 00:55:56'),
 (17, 'data/FLY E146 1 copy.png', 0, 1, 1, 3, 1, '2009-01-03 21:08:57', '2015-02-19 00:55:37'),
-(28, 'data/product-10.png', 57, 0, 0, 1, 1, '2009-02-02 13:11:12', '2014-04-17 11:06:25'),
-(29, 'data/product-04.png', 57, 0, 0, 1, 1, '2009-02-02 13:11:37', '2014-04-17 11:06:31'),
-(30, 'data/product-01.png', 57, 0, 0, 1, 1, '2009-02-02 13:11:59', '2014-04-17 11:06:33'),
-(31, 'data/product-07.png', 57, 0, 0, 1, 1, '2009-02-03 14:17:24', '2014-04-17 11:06:29'),
-(32, 'data/product-19.png', 57, 0, 0, 1, 1, '2009-02-03 14:17:34', '2014-04-17 11:06:18'),
-(35, 'data/product-16.png', 28, 0, 0, 0, 1, '2010-09-17 10:06:48', '2014-04-17 11:06:20'),
-(36, 'data/product-13.png', 28, 0, 0, 0, 1, '2010-09-17 10:07:13', '2014-04-17 11:06:23'),
 (57, 'data/FLY E145 1 copy.png', 0, 1, 1, 2, 1, '2011-04-26 08:53:16', '2015-02-19 00:54:43');
 
 -- --------------------------------------------------------
@@ -335,15 +328,8 @@ CREATE TABLE `oc_category_description` (
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_description`, `meta_keyword`) VALUES
 (17, 4, 'Infantil', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
 (25, 4, 'GIFTS', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(29, 4, 'Lorem ipsum dolor', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
 (24, 4, 'Personalizados', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
 (57, 4, 'Masculino', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(35, 4, 'Ut labore et ', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(36, 4, 'Dolore magna aliqua', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(32, 4, 'Tmpor incididunt ', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(31, 4, 'Sed do eiusmod', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(30, 4, 'Ctetur adipisicing ', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(28, 4, 'Sit amet conse ', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
 (20, 4, 'Feminino', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', 'Example of category description', '');
 
 -- --------------------------------------------------------
@@ -375,22 +361,6 @@ CREATE TABLE `oc_category_path` (
 
 INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
 (25, 25, 0),
-(28, 28, 1),
-(28, 57, 0),
-(35, 57, 0),
-(35, 28, 1),
-(35, 35, 2),
-(36, 57, 0),
-(36, 28, 1),
-(36, 36, 2),
-(29, 29, 1),
-(29, 57, 0),
-(30, 30, 1),
-(30, 57, 0),
-(31, 31, 1),
-(31, 57, 0),
-(32, 32, 1),
-(32, 57, 0),
 (20, 20, 0),
 (27, 20, 0),
 (27, 27, 1),
@@ -478,13 +448,6 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (20, 0),
 (24, 0),
 (25, 0),
-(28, 0),
-(29, 0),
-(30, 0),
-(31, 0),
-(32, 0),
-(35, 0),
-(36, 0),
 (57, 0);
 
 -- --------------------------------------------------------
@@ -851,7 +814,7 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(4, 'Real', 'BRL', 'R$ ', '', '2', 1.00000000, 1, '2015-02-19 00:18:42');
+(4, 'Real', 'BRL', 'R$ ', '', '2', 1.00000000, 1, '2015-02-21 18:55:08');
 
 -- --------------------------------------------------------
 
@@ -2421,59 +2384,30 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (28, 20),
 (28, 24),
 (28, 25),
-(28, 29),
-(28, 30),
-(28, 32),
 (28, 57),
 (29, 20),
 (29, 24),
-(29, 29),
-(29, 30),
-(29, 36),
 (29, 57),
 (30, 20),
 (33, 17),
 (33, 20),
-(33, 28),
-(33, 29),
-(33, 32),
-(33, 35),
 (35, 20),
 (36, 25),
-(36, 29),
-(36, 32),
-(36, 35),
 (36, 57),
 (40, 20),
 (40, 24),
 (42, 20),
-(42, 28),
 (43, 17),
 (43, 20),
-(43, 30),
-(43, 31),
-(43, 35),
 (44, 17),
 (44, 20),
-(44, 28),
-(44, 35),
-(44, 36),
 (44, 57),
 (45, 17),
 (45, 20),
 (45, 25),
-(45, 28),
-(45, 29),
-(45, 32),
 (46, 20),
 (47, 20),
 (48, 20),
-(48, 28),
-(48, 29),
-(48, 31),
-(48, 32),
-(48, 35),
-(48, 36),
 (49, 57);
 
 -- --------------------------------------------------------
@@ -3030,7 +2964,6 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (784, 'information_id=4', 'about_us'),
 (782, 'product_id=42', 'test'),
 (767, 'category_id=34', 'mp3-players'),
-(779, 'category_id=36', 'Normal'),
 (785, 'category_id=57', 'masculino'),
 (787, 'category_id=17', 'infantil'),
 (788, 'category_id=24', 'personalizados');

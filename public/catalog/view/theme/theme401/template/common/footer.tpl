@@ -6,6 +6,11 @@
 </section>
 <footer>
 	<div class="container">
+		<div class="row" style="margin-bottom: 30px; margin-top: -20px;">
+			<div class="fb-like-box" data-href="https://www.facebook.com/pages/Emporium-Camisetas/1549216048674683" data-width="1200" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+		</div>
+
+
 		<div class="row">
 			<?php if ($informations) { ?>
 			<div class="col-sm-2">
@@ -43,13 +48,8 @@
 				<li><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
 				</ul>
 			</div>
-			<div class="col-sm-2">
-				<h3><?php echo $text_follow; ?></h3>
-				<ul>
-					<li><a href="http://facebook.com"><i class="fa fa-facebook-square"></i><?php echo $text_fb; ?></a></li>
-					<li><a href="http://twitter.com"><i class="fa fa-twitter-square"></i><?php echo $text_twi; ?></a></li>
-					<li><a href="#"><i class="fa fa-rss-square"></i><?php echo $text_rss; ?></a></li>
-				</ul>
+			<div class="col-sm-2" style="width: 300px;">
+				<img src="/image/data/pagseguro_logo.png">
 			</div>
 			<!-- 
 			<div class="col-sm-2">
