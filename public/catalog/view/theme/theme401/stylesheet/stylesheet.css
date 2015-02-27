@@ -1491,7 +1491,7 @@ aside .box .box-content .box-product ul li {
 	max-width:300px
 	}
 .box .box-content .box-product ul li.first-in-line {
-	clear:left
+	/* clear:left */
 	}
 .box-filter li {
 	line-height:25px;
@@ -3178,7 +3178,7 @@ span.toggle {
 	background:url(/image/data/bgbottom.jpg) repeat center top;
 	background-size: 100%;
 	margin:0 -100%;
-	padding:78px 0
+	padding: 78px 0 50px;
 	}
 /* banner */
 .banner {
@@ -3215,21 +3215,20 @@ span.toggle {
 	}
 .banner .s-desc h1{
 	font-family: 'Roboto Slab', serif;
-	font-size:70px;
-	line-height:67px;
-	font-weight:400;
-	color:#333;
-	margin:0px;
-	text-transform:none;
+	font-size: 34px;
+	color: #666;
+	margin: 0px;
+	text-transform: none;
 	}
 .banner .s-desc h2{
 	font-family: 'Roboto Slab', serif;
-	font-size:41px;
+	font-size:32px;
 	font-weight:100;
 	color:#7dc8f5;
 	text-transform:none;
 	margin:20px 0;
 	text-transform:none;
+	font-weight: bold;
 	}
 /* AJAX Add to Cart Confirm by Harryo*/
 .success, .warning, .attention, .information, .rev-success {

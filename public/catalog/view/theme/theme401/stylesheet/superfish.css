@@ -30,7 +30,7 @@ ul.sf-menu > li > a {
 	line-height:28px;
 	text-transform:uppercase;
 	height:111px;
-	max-width:180px;
+	/* max-width:180px; */
 	text-align:center;
 	border-bottom:4px solid transparent;
 	display:table-cell;
@@ -199,22 +199,68 @@ ul.sf-menu > li.current>a, ul.sf-menu > li>a:hover, ul.sf-menu > li.sfHover>a, u
   
   
   
+  .cat_1:hover a {
+  	border-color: #7dc8f5 !important;
+  	color: #7dc8f5 !important;
+  }
+  .cat_2:hover a {
+  	border-color: #cb4532 !important;
+  	color: #cb4532 !important;
+  }
+  .cat_3:hover a {
+  	border-color: #93b92e !important;
+  	color: #93b92e !important;
+  }
+  .cat_4:hover a {
+  	border-color: #69669d !important;
+  	color: #69669d !important;
+  }
+  .cat_5:hover a {
+  	border-color: #cb4532 !important;
+  	color: #cb4532 !important;
+  }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+  .current_1 a {
+  	border-color: #7dc8f5 !important;
+  	color: #7dc8f5 !important;
+  }
+  .current_2 a {
+  	border-color: #cb4532 !important;
+  	color: #cb4532 !important;
+  }
+  .current_3 a {
+  	border-color: #93b92e !important;
+  	color: #93b92e !important;
+  }
+  .current_4 a {
+  	border-color: #69669d !important;
+  	color: #69669d !important;
+  }
+  .current_5 a {
+  	border-color: #cb4532 !important;
+  	color: #cb4532 !important;
+  }
+    
+
+
+  .footer_1 {
+  	color: #7dc8f5 !important;
+  }
+  .footer_2 {
+  	color: #cb4532 !important;
+  }
+  .footer_3 {
+  	color: #93b92e !important;
+  }
+  .footer_4 {
+  	color: #69669d !important;
+  }
+  .footer_5 {
+  	color: #cb4532 !important;
+  }
+    
+
+
+
+  li.>a

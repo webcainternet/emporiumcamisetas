@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Feb 21, 2015 at 06:58 PM
+-- Generation Time: Feb 27, 2015 at 01:38 AM
 -- Server version: 5.5.38
 -- PHP Version: 5.3.29
 
@@ -237,17 +237,17 @@ CREATE TABLE `oc_banner_image` (
   `banner_id` int(11) NOT NULL,
   `link` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=383 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=395 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_banner_image`
 --
 
 INSERT INTO `oc_banner_image` (`banner_image_id`, `banner_id`, `link`, `image`) VALUES
-(372, 16, '', ''),
+(394, 16, '/ofertas', ''),
 (381, 15, 'index.php?route=product/product&amp;product_id=32', 'data/slider/hp-hoodies-sweaters-jan2015.jpg'),
-(373, 16, '', ''),
-(371, 16, '', ''),
+(393, 16, '', ''),
+(392, 16, '', ''),
 (382, 15, 'index.php?route=product/product&amp;product_id=29', 'data/slider/hp-schott-banner-hol14.jpg'),
 (380, 15, 'index.php?route=product/product&amp;product_id=28', 'data/slider/hp-womens-hol14-lookbook.jpg');
 
@@ -270,9 +270,9 @@ CREATE TABLE `oc_banner_image_description` (
 --
 
 INSERT INTO `oc_banner_image_description` (`banner_image_id`, `language_id`, `banner_id`, `title`, `description`) VALUES
-(371, 4, 16, 'banner-3', '&lt;h1&gt;Free Shipping&lt;/h1&gt;\r\n&lt;h2&gt;On orders over $99&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;'),
-(372, 4, 16, 'banner-1', '&lt;h1&gt;Special Offer&lt;/h1&gt;\r\n&lt;h2&gt;Get up to 50% off&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;'),
-(373, 4, 16, 'banner-2', '&lt;h1&gt;New Collection&lt;/h1&gt;\r\n&lt;h2&gt;From $15.99&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;  '),
+(394, 4, 16, 'banner-1', '&lt;h1&gt;Promoções&lt;/h1&gt;\r\n&lt;h2 class=&quot;footer_2&quot;&gt;Confira nossas ofertas especiais&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;'),
+(392, 4, 16, 'banner-3', '&lt;h1&gt;Frete grátis&lt;/h1&gt;\r\n&lt;h2 class=&quot;footer_4&quot;&gt;Para compras acima de R$ 200&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;'),
+(393, 4, 16, 'banner-2', '&lt;h1&gt;Novidades&lt;/h1&gt;\r\n&lt;h2 class=&quot;footer_3&quot;&gt;Nova coleção outono inverno&lt;/h2&gt;\r\n&lt;p&gt;Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.&lt;/p&gt;  '),
 (382, 4, 15, 'slide-2', ''),
 (380, 4, 15, 'slide-1', ''),
 (381, 4, 15, 'slide-3', '');
@@ -300,11 +300,10 @@ CREATE TABLE `oc_category` (
 --
 
 INSERT INTO `oc_category` (`category_id`, `image`, `parent_id`, `top`, `column`, `sort_order`, `status`, `date_added`, `date_modified`) VALUES
-(25, 'data/Fly HUMMER HT2 1 copy.png', 0, 0, 1, 5, 1, '2009-01-31 01:04:25', '2015-02-19 00:56:17'),
-(20, 'data/Anycool T818  1 copy.png', 0, 1, 1, 1, 1, '2009-01-05 21:49:43', '2015-02-19 00:55:01'),
-(24, 'data/FLY E176 1 copy.png', 0, 1, 1, 4, 1, '2009-01-20 02:36:26', '2015-02-19 00:55:56'),
-(17, 'data/FLY E146 1 copy.png', 0, 1, 1, 3, 1, '2009-01-03 21:08:57', '2015-02-19 00:55:37'),
-(57, 'data/FLY E145 1 copy.png', 0, 1, 1, 2, 1, '2011-04-26 08:53:16', '2015-02-19 00:54:43');
+(20, 'data/Anycool T818  1 copy.png', 0, 1, 1, 1, 1, '2009-01-05 21:49:43', '2015-02-22 11:16:10'),
+(24, 'data/FLY E176 1 copy.png', 0, 1, 1, 4, 1, '2009-01-20 02:36:26', '2015-02-22 11:16:36'),
+(17, 'data/FLY E146 1 copy.png', 0, 1, 1, 3, 1, '2009-01-03 21:08:57', '2015-02-22 11:16:24'),
+(57, 'data/FLY E145 1 copy.png', 0, 1, 1, 2, 1, '2011-04-26 08:53:16', '2015-02-22 11:16:30');
 
 -- --------------------------------------------------------
 
@@ -326,11 +325,10 @@ CREATE TABLE `oc_category_description` (
 --
 
 INSERT INTO `oc_category_description` (`category_id`, `language_id`, `name`, `description`, `meta_description`, `meta_keyword`) VALUES
-(17, 4, 'Infantil', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(25, 4, 'GIFTS', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(24, 4, 'Personalizados', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(57, 4, 'Masculino', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', ''),
-(20, 4, 'Feminino', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', 'Example of category description', '');
+(57, 4, 'Masculino', '', 'Masculino', ''),
+(20, 4, 'Feminino', '', 'Feminin', ''),
+(17, 4, 'Infantil', '', 'Infantil', ''),
+(24, 4, 'Personalizados', '', 'Personalizados', '');
 
 -- --------------------------------------------------------
 
@@ -360,7 +358,6 @@ CREATE TABLE `oc_category_path` (
 --
 
 INSERT INTO `oc_category_path` (`category_id`, `path_id`, `level`) VALUES
-(25, 25, 0),
 (20, 20, 0),
 (27, 20, 0),
 (27, 27, 1),
@@ -447,7 +444,6 @@ INSERT INTO `oc_category_to_store` (`category_id`, `store_id`) VALUES
 (17, 0),
 (20, 0),
 (24, 0),
-(25, 0),
 (57, 0);
 
 -- --------------------------------------------------------
@@ -814,7 +810,7 @@ CREATE TABLE `oc_currency` (
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(4, 'Real', 'BRL', 'R$ ', '', '2', 1.00000000, 1, '2015-02-21 18:55:08');
+(4, 'Real', 'BRL', 'R$ ', '', '2', 1.00000000, 1, '2015-02-27 00:24:13');
 
 -- --------------------------------------------------------
 
@@ -1974,32 +1970,25 @@ CREATE TABLE `oc_product` (
   `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `date_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `viewed` int(5) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=62 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product`
 --
 
 INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `isbn`, `mpn`, `location`, `quantity`, `stock_status_id`, `image`, `manufacturer_id`, `shipping`, `price`, `points`, `tax_class_id`, `date_available`, `weight`, `weight_class_id`, `length`, `width`, `height`, `length_class_id`, `subtract`, `minimum`, `sort_order`, `status`, `date_added`, `date_modified`, `viewed`) VALUES
-(28, 'Product 1', '', '', '', '', '', '', '', 938, 7, 'data/product-49.png', 11, 1, 100.0000, 200, 9, '2009-02-03', 146.40000000, 2, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 16:06:50', '2014-04-17 15:46:33', 3),
-(29, 'Product 2', '', '', '', '', '', '', '', 995, 6, 'data/product-07.png', 6, 1, 279.9900, 0, 9, '2009-02-03', 133.00000000, 2, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 0, 1, '2009-02-03 16:42:17', '2014-04-17 15:45:01', 0),
-(30, 'Product 3', '', '', '', '', '', '', '', 699, 6, 'data/product-46.png', 9, 1, 100.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 16:59:00', '2014-04-17 15:46:26', 0),
-(31, 'Product 4', '', '', '', '', '', '', '', 999, 6, 'data/product-13.png', 5, 1, 80.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 3, 1, 1, 0, 1, '2009-02-03 17:00:10', '2014-04-17 15:45:14', 0),
-(32, 'Product 5', '', '', '', '', '', '', '', 997, 6, 'data/product-04.png', 5, 1, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 17:07:26', '2014-04-17 15:44:55', 2),
-(33, 'Product 6', '', '', '', '', '', '', '', 984, 6, 'data/product-19.png', 11, 1, 200.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 17:08:31', '2014-04-17 15:45:27', 0),
-(34, 'Product 7', '', '', '', '', '', '', '', 995, 6, 'data/product-31.png', 8, 1, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 18:07:54', '2014-04-17 15:45:49', 0),
-(35, 'Product 8', '', '', '', '', '', '', '', 1000, 5, 'data/product-22.png', 12, 0, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 18:08:31', '2014-04-17 15:45:31', 0),
-(36, 'Product 9', '', '', '', '', '', '', '', 979, 6, 'data/product-16.png', 11, 0, 100.0000, 100, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 18:09:19', '2014-04-17 15:45:21', 0),
-(40, 'product 11', '', '', '', '', '', '', '', 967, 5, 'data/product-34.png', 8, 1, 101.0000, 0, 9, '2009-02-03', 10.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 21:07:12', '2014-04-17 15:45:55', 0),
-(41, 'Product 14', '', '', '', '', '', '', '', 977, 5, 'data/product-28.png', 8, 1, 100.0000, 0, 9, '2009-02-03', 5.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 0, 1, '2009-02-03 21:07:26', '2014-04-17 15:45:43', 0),
-(42, 'Product 15', '', '', '', '', '', '', '', 986, 5, 'data/product-43.png', 8, 1, 100.0000, 400, 9, '2009-02-04', 12.50000000, 1, 1.00000000, 2.00000000, 3.00000000, 1, 1, 2, 0, 1, '2009-02-03 21:07:37', '2014-04-17 15:46:19', 0),
-(43, 'Product 16', '', '', '', '', '', '', '', 899, 5, 'data/product-01.png', 8, 0, 500.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 21:07:49', '2014-04-17 15:44:49', 0),
-(44, 'Product 17', '', '', '', '', '', '', '', 999, 5, 'data/product-40.png', 12, 1, 1000.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 21:08:00', '2014-04-17 15:46:12', 0),
-(45, 'Product 18', '', '', '', '', '', '', '', 993, 5, 'data/product-10.png', 8, 1, 200.0000, 0, 0, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 21:08:17', '2014-04-17 15:45:08', 0),
-(46, 'Product 19', '', '', '', '', '', '', '', 993, 5, 'data/product-25.png', 10, 1, 1000.0000, 0, 9, '2009-02-03', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-03 21:08:29', '2014-04-17 15:45:37', 0),
-(47, 'Product 21', 'sdd', '4578789', '46498', '49894654', '549564', '4684645', '', 1000, 5, 'data/product-37.png', 7, 1, 100.0000, 400, 9, '2009-02-03', 1.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 0, 1, 0, 1, '2009-02-03 21:08:40', '2014-04-17 15:46:01', 0),
-(48, 'product 20', 'test 1', '', '', '', '', '', 'test 2', 994, 5, 'data/product-55.png', 8, 1, 100.0000, 0, 9, '2009-02-08', 1.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 2, 1, 1, 0, 1, '2009-02-08 17:21:51', '2014-04-17 15:44:43', 0),
-(49, 'SAM1', '', '', '', '', '', '', '', 994, 8, 'data/product-52.png', 0, 1, 199.9900, 0, 9, '2011-04-25', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2011-04-26 08:57:34', '2014-04-17 15:46:39', 0);
+(52, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/imagem02_orig.png', 0, 1, 0.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-25 18:12:47', '2015-02-27 01:24:54', 3),
+(53, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/imagem03_orig.png', 0, 1, 77.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-25 18:14:05', '2015-02-27 01:35:50', 0),
+(54, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/bimagem02_orig.png', 0, 1, 0.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-25 18:23:24', '2015-02-27 01:25:25', 0),
+(55, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/bimagem05_orig.png', 0, 1, 980.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-25 18:23:24', '2015-02-27 01:33:11', 1),
+(56, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/bimagem04_orig.png', 0, 1, 1000.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-25 18:23:24', '2015-02-27 01:35:04', 0),
+(57, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/bimagem03_orig.png', 0, 1, 77.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-25 18:23:24', '2015-02-27 01:36:08', 0),
+(58, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/cimagem02_orig.png', 0, 1, 0.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-27 00:45:16', '2015-02-27 01:25:54', 0),
+(59, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/cimagem05_orig.png', 0, 1, 980.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-27 00:45:16', '2015-02-27 01:33:40', 0),
+(60, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/cimagem04_orig.png', 0, 1, 1000.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-27 00:45:16', '2015-02-27 01:35:27', 0),
+(61, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/cimagem03_orig.png', 0, 1, 77.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-27 00:45:16', '2015-02-27 01:36:29', 0),
+(50, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/imagem04_orig.png', 0, 1, 1000.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-25 17:59:35', '2015-02-27 01:34:03', 1),
+(51, 'camiseta 01', '', '', '', '', '', '', '', 1, 5, 'data/emporiumcamisetas/imagem05_orig.png', 0, 1, 980.0000, 0, 0, '2015-02-24', 0.00000000, 1, 0.00000000, 0.00000000, 0.00000000, 1, 1, 1, 1, 1, '2015-02-25 18:10:47', '2015-02-27 01:32:46', 0);
 
 -- --------------------------------------------------------
 
@@ -2013,17 +2002,6 @@ CREATE TABLE `oc_product_attribute` (
   `language_id` int(11) NOT NULL,
   `text` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_product_attribute`
---
-
-INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`, `text`) VALUES
-(42, 3, 4, '100mhz'),
-(47, 4, 4, '16GB'),
-(43, 4, 4, '8gb'),
-(43, 2, 4, '1'),
-(47, 2, 4, '4');
 
 -- --------------------------------------------------------
 
@@ -2046,25 +2024,18 @@ CREATE TABLE `oc_product_description` (
 --
 
 INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `description`, `meta_description`, `meta_keyword`, `tag`) VALUES
-(29, 4, 'Aperce sit conse', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(30, 4, 'Lorem ipsum dolor sit amet conse ctetur adipisicing eli', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(45, 4, 'Dolor sit amet', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(31, 4, 'Dolor sit amet conse', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(33, 4, 'Ecco enswom sucaal Ecco enswom sucaal', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(43, 4, 'Acicte magna ipsum dolor', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', 'lorem, ipsum, dolore'),
-(32, 4, 'amet dolor sit', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(40, 4, 'Ipsum dolor', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(35, 4, 'Eiusmod tempor', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(42, 4, 'Lorem ipsum dolor sit', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(36, 4, 'Ecco enswom sucaal', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(47, 4, 'Ipsum dolor conse', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(49, 4, 'Mfgna set dolor sit amet', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(41, 4, 'Gyllamn sticba Gyllamn sticba', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(28, 4, 'Magna aliqua tation ullamcorper', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(44, 4, 'ISpsum dolor sit amet', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(46, 4, 'Esse cillum dolore', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(48, 4, 'Ut labore et Ut labore et', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', ''),
-(34, 4, 'Incididunt ut', '&lt;p&gt;&lt;strong&gt;The history of T-shirt&lt;/strong&gt; is very interesting. The T-shirt has been a part of clothing since ancient Egypt. A type of modern T-shirt was developed in England in the end of 19th century. The idea of a T-shirt came to the USA during the World War II when American soldiers saw the cotton undershirts of European soldiers. That is a short story of T-shirts origin.&lt;/p&gt;\r\n\r\n&lt;p&gt;&lt;strong&gt;Actually this part &lt;/strong&gt;of clothes is very unique and original. It is a way of self-expression because nowadays making some logo or phrase has become very popular. Obviously the T-shirts are the part of modern culture and they have a great influence on teens because of their freedom and epatage.We are offering you our unique and original products. Our store has a largest choice of different high quality T-shirts. You can buy them at a fair price and get special discount which means that our shop is saving your money. We know that our products have such advantages as premium quality and original design.&lt;/p&gt;\r\n', '', '', '');
+(59, 4, 'Camiseta Carnaval 3', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans; font-size: 11px; line-height: 14px; text-align: justify;&quot;&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/span&gt;&lt;/p&gt;\r\n', '', '', ''),
+(60, 4, 'Camiseta Coração 3', '&lt;p&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/p&gt;\r\n', '', '', ''),
+(61, 4, 'Camiseta Vivo 3', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans; font-size: 11px; line-height: 14px; text-align: justify;&quot;&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/span&gt;&lt;/p&gt;\r\n', '', '', ''),
+(52, 4, 'Camiseta Bob Esponja', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans; font-size: 11px; line-height: 14px; text-align: justify;&quot;&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/span&gt;&lt;/p&gt;\r\n', '', '', ''),
+(53, 4, 'Camiseta Vivo', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans; font-size: 11px; line-height: 14px; text-align: justify;&quot;&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/span&gt;&lt;/p&gt;\r\n', '', '', ''),
+(54, 4, 'Camiseta Bob Esponja 2', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans; font-size: 11px; line-height: 14px; text-align: justify;&quot;&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/span&gt;&lt;/p&gt;\r\n', '', '', ''),
+(55, 4, 'Camiseta Carnaval 2', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans; font-size: 11px; line-height: 14px; text-align: justify;&quot;&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/span&gt;&lt;/p&gt;\r\n', '', '', ''),
+(56, 4, 'Camiseta Coração 2', '&lt;p&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/p&gt;\r\n', '', '', ''),
+(57, 4, 'Camiseta Vivo 2', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans; font-size: 11px; line-height: 14px; text-align: justify;&quot;&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/span&gt;&lt;/p&gt;\r\n', '', '', ''),
+(58, 4, 'Camiseta Bob Esponja 3', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans; font-size: 11px; line-height: 14px; text-align: justify;&quot;&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/span&gt;&lt;/p&gt;\r\n', '', '', ''),
+(50, 4, 'Camiseta Coração', '&lt;p&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/p&gt;\r\n', '', '', ''),
+(51, 4, 'Camiseta Carnaval', '&lt;p&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans; font-size: 11px; line-height: 14px; text-align: justify;&quot;&gt;É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação. A vantagem de usar Lorem Ipsum é que ele tem uma distribuição normal de letras, ao contrário de &quot;Conteúdo aqui, conteúdo aqui&quot;, fazendo com que ele tenha uma aparência similar a de um texto legível. Muitos softwares de publicação e editores de páginas na internet agora usam Lorem Ipsum como texto-modelo padrão, e uma rápida busca por ''lorem ipsum'' mostra vários websites ainda em sua fase de construção. Várias versões novas surgiram ao longo dos anos, eventualmente por acidente, e às vezes de propósito (injetando humor, e coisas do gênero).&lt;/span&gt;&lt;/p&gt;\r\n', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2082,15 +2053,6 @@ CREATE TABLE `oc_product_discount` (
   `date_start` date NOT NULL DEFAULT '0000-00-00',
   `date_end` date NOT NULL DEFAULT '0000-00-00'
 ) ENGINE=MyISAM AUTO_INCREMENT=474 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_product_discount`
---
-
-INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `customer_group_id`, `quantity`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(473, 42, 1, 30, 1, 66.0000, '0000-00-00', '0000-00-00'),
-(472, 42, 1, 20, 1, 77.0000, '0000-00-00', '0000-00-00'),
-(471, 42, 1, 10, 1, 88.0000, '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -2114,68 +2076,25 @@ CREATE TABLE `oc_product_image` (
   `product_id` int(11) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=2899 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2936 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product_image`
 --
 
 INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort_order`) VALUES
-(2895, 28, 'data/product-49.png', 0),
-(2884, 44, 'data/product-40.png', 0),
-(2856, 45, 'data/product-12.png', 0),
-(2859, 31, 'data/product-13.png', 0),
-(2854, 29, 'data/product-07.png', 0),
-(2869, 46, 'data/product-25.png', 0),
-(2892, 30, 'data/product-48.png', 0),
-(2894, 28, 'data/product-51.png', 0),
-(2872, 41, 'data/product-28.png', 0),
-(2878, 40, 'data/product-34.png', 0),
-(2845, 48, 'data/product-57.png', 0),
-(2861, 36, 'data/product-18.png', 0),
-(2860, 36, 'data/product-17.png', 0),
-(2875, 34, 'data/product-32.png', 0),
-(2874, 34, 'data/product-33.png', 0),
-(2873, 34, 'data/product-31.png', 0),
-(2848, 43, 'data/product-01.png', 0),
-(2883, 44, 'data/product-42.png', 0),
-(2855, 45, 'data/product-11.png', 0),
-(2858, 31, 'data/product-15.png', 0),
-(2857, 31, 'data/product-14.png', 0),
-(2853, 29, 'data/product-09.png', 0),
-(2868, 46, 'data/product-27.png', 0),
-(2867, 46, 'data/product-26.png', 0),
-(2898, 49, 'data/product-52.png', 0),
-(2897, 49, 'data/product-54.png', 0),
-(2896, 49, 'data/product-53.png', 0),
-(2889, 42, 'data/product-45.png', 0),
-(2847, 43, 'data/product-03.png', 0),
-(2846, 43, 'data/product-02.png', 0),
-(2852, 29, 'data/product-08.png', 0),
-(2864, 33, 'data/product-19.png', 0),
-(2863, 33, 'data/product-21.png', 0),
-(2862, 33, 'data/product-20.png', 0),
-(2866, 35, 'data/product-24.png', 0),
-(2865, 35, 'data/product-23.png', 0),
-(2871, 41, 'data/product-30.png', 0),
-(2870, 41, 'data/product-29.png', 0),
-(2891, 30, 'data/product-47.png', 0),
-(2890, 30, 'data/product-46.png', 0),
-(2851, 32, 'data/product-04.png', 0),
-(2850, 32, 'data/product-06.png', 0),
-(2849, 32, 'data/product-05.png', 0),
-(2844, 48, 'data/product-56.png', 0),
-(2893, 28, 'data/product-50.png', 0),
-(2888, 42, 'data/product-44.png', 0),
-(2887, 42, 'data/product-43.png', 0),
-(2881, 47, 'data/product-37.png', 0),
-(2880, 47, 'data/product-39.png', 0),
-(2877, 40, 'data/product-36.png', 0),
-(2876, 40, 'data/product-35.png', 0),
-(2882, 44, 'data/product-41.png', 0),
-(2879, 47, 'data/product-38.png', 0),
-(2886, 42, 'data/product-45.png', 0),
-(2885, 42, 'data/product-44.png', 0);
+(2931, 56, 'no_image.jpg', 0),
+(2932, 60, 'no_image.jpg', 0),
+(2935, 61, 'no_image.jpg', 0),
+(2934, 57, 'no_image.jpg', 0),
+(2925, 58, 'no_image.jpg', 0),
+(2928, 59, 'no_image.jpg', 0),
+(2929, 50, 'no_image.jpg', 0),
+(2926, 51, 'no_image.jpg', 0),
+(2923, 52, 'no_image.jpg', 0),
+(2933, 53, 'no_image.jpg', 0),
+(2924, 54, 'no_image.jpg', 0),
+(2927, 55, 'no_image.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -2190,16 +2109,6 @@ CREATE TABLE `oc_product_option` (
   `option_value` text NOT NULL,
   `required` tinyint(1) NOT NULL
 ) ENGINE=MyISAM AUTO_INCREMENT=227 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_product_option`
---
-
-INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`, `option_value`, `required`) VALUES
-(224, 35, 11, '', 1),
-(225, 47, 12, '2011-04-22', 1),
-(226, 30, 5, '', 1),
-(217, 42, 5, '', 1);
 
 -- --------------------------------------------------------
 
@@ -2222,21 +2131,6 @@ CREATE TABLE `oc_product_option_value` (
   `weight` decimal(15,8) NOT NULL,
   `weight_prefix` varchar(1) NOT NULL
 ) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_product_option_value`
---
-
-INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
-(2, 217, 42, 5, 42, 200, 1, 2.0000, '+', 0, '+', 2.00000000, '+'),
-(1, 217, 42, 5, 41, 100, 0, 1.0000, '+', 0, '+', 1.00000000, '+'),
-(13, 224, 35, 11, 47, 10, 1, 10.0000, '+', 0, '+', 0.00000000, '+'),
-(15, 226, 30, 5, 39, 1, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
-(16, 226, 30, 5, 40, 5, 1, 0.0000, '+', 0, '+', 0.00000000, '+'),
-(3, 217, 42, 5, 40, 300, 0, 3.0000, '+', 0, '+', 3.00000000, '+'),
-(4, 217, 42, 5, 39, 88, 1, 4.0000, '+', 0, '+', 4.00000000, '+'),
-(12, 224, 35, 11, 46, 0, 1, 5.0000, '+', 0, '+', 0.00000000, '+'),
-(14, 224, 35, 11, 48, 15, 1, 15.0000, '+', 0, '+', 0.00000000, '+');
 
 -- --------------------------------------------------------
 
@@ -2272,30 +2166,6 @@ CREATE TABLE `oc_product_related` (
   `related_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `oc_product_related`
---
-
-INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
-(29, 42),
-(29, 43),
-(31, 43),
-(32, 43),
-(40, 42),
-(41, 42),
-(42, 29),
-(42, 40),
-(42, 41),
-(42, 42),
-(42, 45),
-(43, 29),
-(43, 31),
-(43, 32),
-(43, 43),
-(43, 45),
-(45, 42),
-(45, 43);
-
 -- --------------------------------------------------------
 
 --
@@ -2307,32 +2177,25 @@ CREATE TABLE `oc_product_reward` (
   `product_id` int(11) NOT NULL DEFAULT '0',
   `customer_group_id` int(11) NOT NULL DEFAULT '0',
   `points` int(8) NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=710 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=747 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_product_reward`
 --
 
 INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
-(706, 42, 1, 100),
-(704, 47, 1, 300),
-(708, 28, 1, 400),
-(692, 43, 1, 600),
-(694, 29, 1, 0),
-(691, 48, 1, 0),
-(703, 40, 1, 0),
-(707, 30, 1, 200),
-(705, 44, 1, 700),
-(695, 45, 1, 800),
-(696, 31, 1, 0),
-(699, 35, 1, 0),
-(698, 33, 1, 0),
-(700, 46, 1, 0),
-(701, 41, 1, 0),
-(697, 36, 1, 0),
-(702, 34, 1, 0),
-(693, 32, 1, 0),
-(709, 49, 1, 1000);
+(735, 54, 1, 0),
+(742, 56, 1, 0),
+(734, 52, 1, 0),
+(740, 50, 1, 0),
+(745, 57, 1, 0),
+(744, 53, 1, 0),
+(738, 55, 1, 0),
+(746, 61, 1, 0),
+(743, 60, 1, 0),
+(739, 59, 1, 0),
+(736, 58, 1, 0),
+(737, 51, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -2350,21 +2213,6 @@ CREATE TABLE `oc_product_special` (
   `date_end` date NOT NULL DEFAULT '0000-00-00'
 ) ENGINE=MyISAM AUTO_INCREMENT=514 DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `oc_product_special`
---
-
-INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(510, 42, 1, 1, 90.0000, '0000-00-00', '0000-00-00'),
-(512, 30, 1, 2, 90.0000, '0000-00-00', '0000-00-00'),
-(511, 30, 1, 1, 80.0000, '0000-00-00', '0000-00-00'),
-(506, 45, 1, 0, 199.0000, '0000-00-00', '0000-00-00'),
-(508, 41, 1, 0, 99.0000, '0000-00-00', '0000-00-00'),
-(509, 40, 1, 0, 99.0000, '0000-00-00', '0000-00-00'),
-(513, 49, 1, 0, 190.0000, '0000-00-00', '0000-00-00'),
-(505, 43, 1, 0, 499.0000, '0000-00-00', '0000-00-00'),
-(507, 31, 1, 0, 73.0000, '0000-00-00', '0000-00-00');
-
 -- --------------------------------------------------------
 
 --
@@ -2375,40 +2223,6 @@ CREATE TABLE `oc_product_to_category` (
   `product_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `oc_product_to_category`
---
-
-INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
-(28, 20),
-(28, 24),
-(28, 25),
-(28, 57),
-(29, 20),
-(29, 24),
-(29, 57),
-(30, 20),
-(33, 17),
-(33, 20),
-(35, 20),
-(36, 25),
-(36, 57),
-(40, 20),
-(40, 24),
-(42, 20),
-(43, 17),
-(43, 20),
-(44, 17),
-(44, 20),
-(44, 57),
-(45, 17),
-(45, 20),
-(45, 25),
-(46, 20),
-(47, 20),
-(48, 20),
-(49, 57);
 
 -- --------------------------------------------------------
 
@@ -2449,25 +2263,18 @@ CREATE TABLE `oc_product_to_store` (
 --
 
 INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
-(28, 0),
-(29, 0),
-(30, 0),
-(31, 0),
-(32, 0),
-(33, 0),
-(34, 0),
-(35, 0),
-(36, 0),
-(40, 0),
-(41, 0),
-(42, 0),
-(43, 0),
-(44, 0),
-(45, 0),
-(46, 0),
-(47, 0),
-(48, 0),
-(49, 0);
+(50, 0),
+(51, 0),
+(52, 0),
+(53, 0),
+(54, 0),
+(55, 0),
+(56, 0),
+(57, 0),
+(58, 0),
+(59, 0),
+(60, 0),
+(61, 0);
 
 -- --------------------------------------------------------
 
@@ -2641,7 +2448,7 @@ CREATE TABLE `oc_setting` (
   `key` varchar(64) NOT NULL,
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=5472 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5484 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_setting`
@@ -2724,9 +2531,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `se
 (4908, 0, 'bestseller', 'bestseller_module', 'a:4:{i:0;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"3";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:1;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"4";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:2;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"2";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:3;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"8";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
 (5421, 0, 'config', 'config_image_related_width', '170', 0),
 (4912, 0, 'latest', 'latest_module', 'a:4:{i:0;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"3";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:1;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"4";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:2;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"9";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}i:3;a:7:{s:5:"limit";s:1:"1";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"2";s:8:"position";s:12:"column_right";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"3";}}', 1),
-(5469, 0, 'featured', 'product', 'ipsum dolo', 0),
-(5470, 0, 'featured', 'featured_product', '42,45,31,36,34,46,49,30,32,35,40,47', 0),
-(5471, 0, 'featured', 'featured_module', 'a:1:{i:0;a:7:{s:5:"limit";s:2:"12";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}}', 1),
+(5483, 0, 'featured', 'featured_module', 'a:1:{i:0;a:7:{s:5:"limit";s:2:"12";s:11:"image_width";s:3:"270";s:12:"image_height";s:3:"270";s:9:"layout_id";s:1:"1";s:8:"position";s:11:"content_top";s:6:"status";s:1:"1";s:10:"sort_order";s:1:"2";}}', 1),
 (5422, 0, 'config', 'config_image_related_height', '170', 0),
 (5420, 0, 'config', 'config_image_additional_height', '70', 0),
 (5419, 0, 'config', 'config_image_additional_width', '70', 0),
@@ -2734,6 +2539,7 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `se
 (5417, 0, 'config', 'config_image_product_width', '270', 0),
 (5416, 0, 'config', 'config_image_popup_height', '600', 0),
 (5414, 0, 'config', 'config_image_thumb_height', '270', 0),
+(5481, 0, 'featured', 'product', 'cami', 0),
 (5415, 0, 'config', 'config_image_popup_width', '600', 0),
 (5413, 0, 'config', 'config_image_thumb_width', '270', 0),
 (5412, 0, 'config', 'config_image_category_height', '190', 0),
@@ -2813,7 +2619,8 @@ INSERT INTO `oc_setting` (`setting_id`, `store_id`, `group`, `key`, `value`, `se
 (5459, 0, 'config', 'config_error_display', '1', 0),
 (5460, 0, 'config', 'config_error_log', '1', 0),
 (5461, 0, 'config', 'config_error_filename', 'error.txt', 0),
-(5462, 0, 'config', 'config_google_analytics', '', 0);
+(5462, 0, 'config', 'config_google_analytics', '', 0),
+(5482, 0, 'featured', 'featured_product', '52,50,53,51,54,55,56,57,58,59,60,61', 0);
 
 -- --------------------------------------------------------
 
@@ -2949,24 +2756,22 @@ CREATE TABLE `oc_url_alias` (
 `url_alias_id` int(11) NOT NULL,
   `query` varchar(255) NOT NULL,
   `keyword` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=789 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=793 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `oc_url_alias`
 --
 
 INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
-(781, 'product_id=48', 'ipod_classic'),
-(786, 'category_id=20', 'feminino'),
+(789, 'category_id=20', 'feminino'),
 (503, 'category_id=26', 'pc'),
 (505, 'category_id=27', 'mac'),
 (730, 'manufacturer_id=8', 'apple'),
 (784, 'information_id=4', 'about_us'),
-(782, 'product_id=42', 'test'),
 (767, 'category_id=34', 'mp3-players'),
-(785, 'category_id=57', 'masculino'),
-(787, 'category_id=17', 'infantil'),
-(788, 'category_id=24', 'personalizados');
+(791, 'category_id=57', 'masculino'),
+(790, 'category_id=17', 'infantil'),
+(792, 'category_id=24', 'personalizados');
 
 -- --------------------------------------------------------
 
@@ -7898,7 +7703,7 @@ MODIFY `banner_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 -- AUTO_INCREMENT for table `oc_banner_image`
 --
 ALTER TABLE `oc_banner_image`
-MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=383;
+MODIFY `banner_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=395;
 --
 -- AUTO_INCREMENT for table `oc_category`
 --
@@ -8098,7 +7903,7 @@ MODIFY `order_voucher_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `oc_product`
 --
 ALTER TABLE `oc_product`
-MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=50;
+MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=62;
 --
 -- AUTO_INCREMENT for table `oc_product_discount`
 --
@@ -8108,7 +7913,7 @@ MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=474;
 -- AUTO_INCREMENT for table `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2899;
+MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2936;
 --
 -- AUTO_INCREMENT for table `oc_product_option`
 --
@@ -8123,7 +7928,7 @@ MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=
 -- AUTO_INCREMENT for table `oc_product_reward`
 --
 ALTER TABLE `oc_product_reward`
-MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=710;
+MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=747;
 --
 -- AUTO_INCREMENT for table `oc_product_special`
 --
@@ -8168,7 +7973,7 @@ MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `oc_setting`
 --
 ALTER TABLE `oc_setting`
-MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5472;
+MODIFY `setting_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5484;
 --
 -- AUTO_INCREMENT for table `oc_stock_status`
 --
@@ -8198,7 +8003,7 @@ MODIFY `tax_rule_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=129;
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=789;
+MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=793;
 --
 -- AUTO_INCREMENT for table `oc_user`
 --

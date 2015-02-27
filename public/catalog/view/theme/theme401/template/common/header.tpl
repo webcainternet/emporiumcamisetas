@@ -232,7 +232,7 @@ $('body').prepend('<iframe src="<?php echo $store; ?>" style="display: none;"></
 						<?php $cv=0;?>
 						<?php foreach ($categories as $category) { $cv++; ?>
 						<?php if ($category['category_id'] == $category_id) { ?>
-						<li class="current cat_<?php echo $cv ?>">
+						<li class="current cat_<?php echo $cv ?> current_<?php echo $cv ?>">
 						<?php } else { ?>
 						<li class="cat_<?php echo $cv ?>">
 						<?php } ?>
