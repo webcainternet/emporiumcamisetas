@@ -47,7 +47,7 @@
 	float:none;
 	}
 .box .box-content .box-product ul li .padding:hover .inner {
-	display:block;
+	display:none;
 	}
 .box .box-content .box-product ul li .name a:hover {
 	color:fff;
@@ -68,7 +68,7 @@
 	border-radius:50%;
 	}
 .box .box-content .box-product ul li .inner {
-	display:none;
+	display:block;
 	position:absolute;
 	top:0;
 	left:0;
