@@ -47,6 +47,9 @@
 	float:none;
 	}
 .box .box-content .box-product ul li .padding:hover .inner {
+	display:block;
+	}
+.box .box-content .box-product ul li .padding:hover .inner2 {
 	display:none;
 	}
 .box .box-content .box-product ul li .name a:hover {
@@ -68,6 +71,23 @@
 	border-radius:50%;
 	}
 .box .box-content .box-product ul li .inner {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	text-align:center;
+	/* background:rgba(242,121,150,0.8); #7dc8f5 */
+	background:rgba(125,200,245,0.7);
+	padding:18% 25px 0 ;
+	border-radius:50%;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	}
+.box .box-content .box-product ul li .inner2 {
 	display:block;
 	position:absolute;
 	top:0;
@@ -85,6 +105,8 @@
     transition: all 0.5s ease;
 	}
 }
+
+
 @media (min-width: 768px) and (max-width: 1199px) {
 a.button span {white-space:normal}
 .compare-info td img {max-width:100px}
