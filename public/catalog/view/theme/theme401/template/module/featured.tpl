@@ -41,7 +41,17 @@
 					});
 					});
 				</script> 
+
+				<div class="carrinhoicone">
+							<i class="fa fa-shopping-cart"></i>
+				</div>
+
 				<div class="padding">
+
+
+
+
+
 					<div class="image2">
 						<?php if ($product['thumb']) { ?>
 						<a href="<?php echo $product['href']; ?>">
@@ -55,6 +65,7 @@
 
 
 					<div class="inner2 image2" style="padding: 25px 25px 0;">
+
 						<?php if ($product['thumb']) { 
 							$imgprod = str_replace("_orig", "_hover",$product['thumb']);
 							$imgprod = str_replace("-270x270", "", $imgprod);

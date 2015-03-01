@@ -106,6 +106,10 @@
 	}
 }
 
+.box .box-content .box-product ul li .carrinhoicone {
+	display:block;
+}
+
 
 @media (min-width: 768px) and (max-width: 1199px) {
 a.button span {white-space:normal}
