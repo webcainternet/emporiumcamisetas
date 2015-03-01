@@ -41,10 +41,11 @@
 					});
 					});
 				</script> 
-
+				<a href="<?php echo $product['href']; ?>">
 				<div class="carrinhoicone">
 							<i class="fa fa-shopping-cart"></i>
 				</div>
+				</a>
 
 				<div class="padding">
 
