@@ -3563,6 +3563,7 @@ z-index:8;
 }
 
 .carrinhoicone {
+	display: none;
 	background-color: #323232; 
 	position: absolute; 
 	right: 21px; 
