@@ -23,40 +23,51 @@
 							}
 						?>
 			<li class="<?php echo $a. $last_line ;?> col-sm-<?php echo $spanLine ;?>">
-				<div class="padding">
-				<div class="image2">
-					<?php if ($product['thumb']) { ?><a href="<?php echo $product['href']; ?>"><img id="img_<?php echo $product['product_id']; ?>" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" /></a><?php } ?>
-				</div>
-				<div class="inner">
-					<div class="f-left">
-						<?php if ($product['price']) { ?>
-						<div class="price">
-							<?php if (!$product['special']) { ?>
-							<?php echo $product['price']; ?>
-							<?php } else { ?>
-							<span class="price-new"><?php echo $product['special']; ?></span><span class="price-old"><?php echo $product['price']; ?></span>
-							<?php } ?>
-						</div>
-						<?php } ?>
-						<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
-						</div>
-						<div class="cart-button">
-							<div class="cart">
-								<a title="<?php echo $button_cart; ?>" data-id="<?php echo $product['product_id']; ?>;" class="button addToCart">
-									<span><?php echo $button_cart; ?></span>
-								</a>
-							</div>
-							<span class="clear"></span>
-						</div>
-					<div class="clear"></div>
-					<?php if ($product['rating']) { ?>
-					<div class="rating">
-						<img height="13" src="catalog/view/theme/theme401/image/stars-<?php echo $product['rating']; ?>.png" alt="<?php echo $product['reviews']; ?>" />
+				<a href="<?php echo $product['href']; ?>">
+					<div class="carrinhoicone">
+								<i class="fa fa-shopping-cart"></i>
 					</div>
-					<?php } ?>
-				</div>
-				<div class="clear"></div>
-				</div>
+					</a>
+
+
+							<div class="padding">
+
+
+
+
+					<div class="image2">
+						<?php if ($product['thumb']) { ?>
+						<a href="<?php echo $product['href']; ?>">
+							<img id="img_<?php echo $product['product_id']; ?>" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" />
+						</a>
+						<?php } ?>
+					</div>
+				
+
+
+
+
+					<div class="inner2 image2" style="padding: 25px 25px 0;">
+
+						<?php if ($product['thumb']) { 
+							$imgprod = str_replace("_orig", "_hover",$product['thumb']);
+							$imgprod = str_replace("-270x270", "", $imgprod);
+							$imgprod = str_replace("/cache/", "/", $imgprod);
+						?>
+						<a href="<?php echo $product['href']; ?>">
+							<img id="img_<?php echo $product['product_id']; ?>" src="<?php echo $imgprod; ?>" alt="<?php echo $product['name']; ?>" />
+						</a>
+						<?php } ?>
+					</div>
+
+					<div class="clear"></div>
+
+
+
+
+
+
+							</div>
 			</li>
 		  <?php } ?>
 	   </ul>
