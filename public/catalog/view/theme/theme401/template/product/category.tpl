@@ -73,8 +73,52 @@
 	  </select>
 	</div>
   <div class="product-compare"><a href="<?php echo $compare; ?>" id="compare-total"><?php echo $text_compare; ?></a></div>
-	<div class="display"><b><?php echo $text_display; ?></b> <?php echo $text_list; ?>  <a onclick="display('grid');"><?php echo $text_grid; ?></a></div>
+	<div class="display" style="display: none;"><b><?php echo $text_display; ?></b> <?php echo $text_list; ?>  <a onclick="display('grid');"><?php echo $text_grid; ?></a></div>
   </div>
+
+<style type="text/css">
+
+.inner2 {
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	text-align:center;
+	/* background:rgba(242,121,150,0.8); #7dc8f5 */
+	background:rgba(125,200,245,0.7);
+	padding:18% 25px 0 ;
+	border-radius:50%;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.image2 {
+	border-radius:50%;
+}
+.tituloproduto {
+	text-align: center;
+	  margin-top: 10px;
+	  font-family: 'Roboto Slab', serif;
+	  text-transform: uppercase;
+	  color: #333;
+}
+.precovalor {
+  color: #7dc8f5;
+  font-size: 31px;
+  text-transform: uppercase;
+  font-family: 'Roboto Slab', serif;
+  text-align: right;
+  margin-top: 5px;
+}
+
+ul li .padding:hover .inner {
+	display:block;
+	}
+ul li .padding:hover .inner2 {
+	display:none;
+	}
+</style>
 
   <div class="product-grid">
 	<ul class="row">
@@ -90,39 +134,42 @@
 				$a='';
 			}
 		?>
-		<li class="col-sm-4 <?php echo $a?>">
+		<li class="col-sm-4 <?php echo $a?>" style="margin-bottom: 27px;">
+
+
 		<div class="padding">
-		<?php if ($product['thumb']) { ?>
-		<div class="image"><a href="<?php echo $product['href']; ?>"><img id="img_<?php echo $product['product_id']; ?>" src="<?php echo $product['thumb']; ?>" title="<?php echo $product['name']; ?>" alt="<?php echo $product['name']; ?>" /></a></div>
-	  <?php } ?>
-		<div class="name"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
-		<div class="description"><?php echo $product['description']; ?></div>
-		<?php if ($product['price']) { ?>
-		<div class="price">
-		<?php if ($product['tax']) { ?>
-		<span class="price-tax"><?php echo $text_tax; ?> <?php echo $product['tax']; ?></span>
-		<?php } ?>
-		<?php if (!$product['special']) { ?>
-		<?php echo $product['price']; ?>
-		<?php } else { ?><span class="price-new"><?php echo $product['special']; ?></span>
-		<span class="price-old"><?php echo $product['price']; ?></span> 
-		<?php } ?>
-		</div>
-		<?php } ?>
-		<div class="cart-button">
-			<div class="cart"><a onclick="addToCart('<?php echo $product['product_id']; ?>');" class="button" title="<?php echo $button_cart; ?>"><!--<i class="fa fa-shopping-cart"></i>--><span><?php echo $button_cart; ?></span></a></div>
-			<div class="wishlist"><a class="tooltip-1 " title="<?php echo $button_wishlist; ?>"  onclick="addToWishList('<?php echo $product['product_id']; ?>');"><i class="fa fa-star"></i></a></div>
-			<div class="compare"><a class="tooltip-1" title="<?php echo $button_compare; ?>"  onclick="addToCompare('<?php echo $product['product_id']; ?>');"><i class="fa fa-bar-chart-o"></i></a></div>
+			<div class="image2">
+				<?php if ($product['thumb']) { ?>
+				<a href="<?php echo $product['href']; ?>">
+					<img id="img_<?php echo $product['product_id']; ?>" src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" style="border-radius: 50%;" />
+				</a>
+				<?php } ?>
+			</div>
+
+
+			<div class="inner2 image2" style="padding: 25px;  margin-left: 15px;">
+
+				<?php if ($product['thumb']) { 
+					$imgprod = str_replace("_orig", "_hover",$product['thumb']);
+					$imgprod = str_replace("-270x270", "", $imgprod);
+					$imgprod = str_replace("/cache/", "/", $imgprod);
+				?>
+				<a href="<?php echo $product['href']; ?>">
+					<img id="img_<?php echo $product['product_id']; ?>" src="<?php echo $imgprod; ?>" alt="<?php echo $product['name']; ?>" style="border-radius: 50%;   width: 221px;" />
+				</a>
+				<?php } ?>
+			</div>
+
+			<div class="tituloproduto"><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></div>
+			<div class="precovalor"><a href="<?php echo $product['href']; ?>" class="precovalor"><?php echo $product['price']; ?></a></div>
+
 			<div class="clear"></div>
+
 		</div>
-		<div class="rating">
-			<?php if ($product['rating']) { ?>
-			<img height="13" src="catalog/view/theme/theme401/image/stars-<?php echo $product['rating']; ?>.png" alt="<?php echo $product['reviews']; ?>" />
-			<?php } ?>
-		</div>
-		</div>
+
 	</li>
 		<?php } ?>
+
 	 </ul>
   </div>
   
@@ -136,128 +183,9 @@
 	  </div>
   </div>
   <?php } ?>
+  
   <?php echo $content_bottom; ?></div>
 
 <?php echo $column_right; ?>
-
-<script type="text/javascript"><!--
-function display(view) {
-	if (view == 'list') {
-		$('.product-grid ').attr('class', 'product-list');
-		$('.product-list ul').removeClass('row');
-		$('.product-list ul li').removeClass('col-sm-4');
-		$('.product-list ul li').each(function(index, element) {
-			html = '';
-					html += '<div class="row">';
-			var image = $(element).find('.image').html();
-			
-			if (image != null) {
-				html += '<div class="image col-sm-3">' + image + '</div>';
-			}
-			html += '<div class="left col-sm-9">';
-				html += '<div class="name">' + $(element).find('.name').html() + '</div>';
-				html += '<div class="description">' + $(element).find('.description').html() + '</div>';
-				var price = $(element).find('.price').html();
-				if (price != null) {
-					html += '<div class="price">' + price  + '</div>';
-				}
-				html += '<div class="cart-button">';
-				html += '<div class="cart">' + $(element).find('.cart').html() + '</div>';
-				html += '<div class="wishlist">' + $(element).find('.wishlist').html() + '</div>';
-				html += '<div class="compare">' + $(element).find('.compare').html() + '</div>';
-				html += '<div class="clear">' + $(element).find('.clear').html() + '</div>';
-				html += '</div>';
-				var rating = $(element).find('.rating').html();
-				if (rating != null) {
-					html += '<div class="rating">' + rating + '</div>';
-				}
-				html += '</div>';
-				html += '</div>';
-			
-
-						
-			$(element).html(html);
-		});		
-		
-		$('.display').html('<b><?php echo $text_display; ?></b> <div id="list_b"><i class="fa fa-list"></i></div> <a id="grid_a" onclick="display(\'grid\');"><i class="fa fa-th"></i></a>');
-		
-		$.totalStorage('display', 'list'); 
-	} else {
-		$('.product-list').attr('class', 'product-grid');
-		$('.product-grid ul').addClass('row');
-		$('.product-grid ul li').addClass('col-sm-4');
-		$('.product-grid ul li').each(function(index, element) {
-			html = '';
-					
-			var image = $(element).find('.image').html();
-			
-			if (image != null) {
-			html += '<div class="padding">';
-				html += '<div class="image">' + image + '</div>';
-			}
-			html += '<div class="left">';
-		
-			
-			
-			
-			html += '<div class="name">' + $(element).find('.name').html() + '</div>';
-			var price = $(element).find('.price').html();
-			
-			if (price != null) {
-				html += '<div class="price">' + price  + '</div>';
-			}
-			html += '<div class="description">' + $(element).find('.description').html() + '</div>';
-			
-			
-			html += '<div class="cart-button">';
-			html += '<div class="cart">' + $(element).find('.cart').html() + '</div>';
-			html += '<div class="wishlist">' + $(element).find('.wishlist').html() + '</div>';
-			html += '<div class="compare">' + $(element).find('.compare').html() + '</div>';
-			html += '<div class="clear">' + $(element).find('.clear').html() + '</div>';
-			html += '</div>';
-			var rating = $(element).find('.rating').html();
-			
-			if (rating != null) {
-				html += '<div class="rating">' + rating + '</div>';
-			}
-			
-			html += '</div></div>';
-			$(element).html(html);
-		});	
-					
-		$('.display').html('<b><?php echo $text_display; ?></b> <a id="list_a" onclick="display(\'list\');"><i class="fa fa-list"></i></a>  <div id="grid_b"><i class="fa fa-th"></i></i></div>');
-		
-		$.totalStorage('display', 'grid');
-	}
-	if ($('body').width() > 940) {
-	// tooltip demo
-		$('.tooltip-toggle').tooltip({
-		selector: "a[data-toggle=tooltip]"
-		})
-		$('.tooltip-1').tooltip({
-			placement:'bottom'
-		})
-		$('.tooltip-2').tooltip({
-			placement:'top'
-		})
-		}
-	
-}
-
-view = $.totalStorage('display');
-
-if (view) {
-	display(view);
-} else {
-	display('grid');
-}
-//--></script> 
-<!--<script type="text/javascript">
-		(function($){$.fn.equalHeights=function(minHeight,maxHeight){tallest=(minHeight)?minHeight:0;this.each(function(){if($(this).height()>tallest){tallest=$(this).height()}});if((maxHeight)&&tallest>maxHeight)tallest=maxHeight;return this.each(function(){$(this).height(tallest)})}})(jQuery)
-	$(window).load(function(){
-		if($(".cat-height").length){
-		$(".cat-height").equalHeights()}
-	})
-</script>-->
 
 <?php echo $footer; ?>
