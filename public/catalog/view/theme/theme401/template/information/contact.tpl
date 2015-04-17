@@ -12,12 +12,12 @@
 	<div class="contact-info">
 		<div class="content row">
 			<div class="map-left col-sm-6">      
-				<div class="contact-box"><i class="fa fa-home"></i><b><?php echo $text_address; ?></b>
+				<div class="contact-box" style="display: none;"><i class="fa fa-home"></i><b><?php echo $text_address; ?></b>
 					<?php echo $address; ?>
 				</div>
-				<div class="contact-box" style="display: none;">
+				<div class="contact-box">
 					<?php if ($telephone) { ?>
-					<i class="fa"></i><b><h1>@</h1> E-Mail: </b>
+					<i class="fa"></i><b><h1 style="display: inline-block;">@</h1> E-Mail: </b>
 					contato@emporiumcamisetas.com.br
 					<?php } ?>
 				</div>
