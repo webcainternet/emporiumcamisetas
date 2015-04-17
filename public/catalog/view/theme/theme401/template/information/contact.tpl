@@ -17,8 +17,8 @@
 				</div>
 				<div class="contact-box" style="display: none;">
 					<?php if ($telephone) { ?>
-					<i class="fa fa-phone"></i><b><?php echo $text_telephone; ?></b>
-					<?php echo $telephone; ?>
+					<i class="fa"></i><b><h1>@</h1> E-Mail: </b>
+					contato@emporiumcamisetas.com.br
 					<?php } ?>
 				</div>
 				<div class="contact-box" style="display: none;">
