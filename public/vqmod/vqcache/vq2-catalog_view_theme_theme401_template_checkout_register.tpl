@@ -1,4 +1,4 @@
-<div class="left">
+<div class="left" style="float: left; width: 49%;">
   <h2><?php echo $text_your_details; ?></h2>
   <span class="required">*</span> <?php echo $entry_firstname; ?><br />
   <input type="text" name="firstname" value="" class="large-field" />
@@ -16,10 +16,12 @@
   <input type="text" name="telephone" value="" class="large-field" />
   <br />
   <br />
-  <?php echo $entry_fax; ?><br />
-  <input type="text" name="fax" value="" class="large-field" />
-  <br />
-  <br />
+  <div style="display: none;">
+    <?php echo $entry_fax; ?><br />
+    <input type="text" name="fax" value="" class="large-field" />
+    <br />
+    <br />
+  </div>
   <h2><?php echo $text_your_password; ?></h2>
   <span class="required">*</span> <?php echo $entry_password; ?><br />
   <input type="password" name="password" value="" class="large-field" />
@@ -33,10 +35,13 @@
 </div>
 <div class="right">
   <h2><?php echo $text_your_address; ?></h2>
+
+<div style="display: none;">  
   <?php echo $entry_company; ?><br />
   <input type="text" name="company" value="" class="large-field" />
   <br />
   <br />
+</div>
   <div style="display: <?php echo (count($customer_groups) > 1 ? 'table-row' : 'none'); ?>;">
   <?php echo $entry_customer_group; ?><br />
   <?php foreach ($customer_groups as $customer_group) { ?>
@@ -52,10 +57,12 @@
   <?php } ?>
   <br />
 </div>
+<div style="display: none;">
 <div id="company-id-display"><span id="company-id-required" class="required">*</span> <?php echo $entry_company_id; ?><br />
   <input type="text" name="company_id" value="" class="large-field" />
   <br />
   <br />
+</div>
 </div>
 <div id="tax-id-display"><span id="tax-id-required" class="required">*</span> <?php echo $entry_tax_id; ?><br />
   <input type="text" name="tax_id" value="" class="large-field" />
